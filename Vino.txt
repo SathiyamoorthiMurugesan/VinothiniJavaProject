@@ -123,7 +123,7 @@ Types of variables
 	
 3. Static variable
 	* Declared within a class but outside fo a method
-	* static keyword is used with variables
+	* static keyword is used with variables and methods
 	* To access this variable, dont need to create an object
 	
 	static int a = 10;
@@ -322,7 +322,98 @@ With in a class
 * calling non-static from a static method - Object creation
 * calling non-static from a non static - Object creation/ directly call
 
-Test
+***************************************************************************************************
+
+DAY 6
+
+Object creation
+
+1) We create object only for class.
+2) In order to access non static members of a class, we create object and access the methods and variables
+
+
+Memory Management
+
+Heap memory
+Stack memory
+SCP (String Constant Pool)
+
+ClassA obj1 = new ClassA();
+
+ClassA - Class Name
+Obj1 - Object Name 
+new = key word to create obj
+ClassA() - Constructor or Object creation or instance creation
+
+* Whenever we create an object for a class, whatever non-static variables and methods present in that class will be copied to heap memory
+* Object varibale or instance variable, is stored in stack memory 
+
+
+	stack memory			HEap me
+	obj1				a = 10; method1();
+	obj2				a = 10; method1();
+	obj3				a = 10; method1(); 
+	obj1ClassB			non static members 
+	
+int a = 10;
+* a = 10 - it will be stored in stack memory
+
+String Sathya = "1000"; String Literals
+String Sathya = new String("1000"); Object creation
+
+Sathya - Stack
+1000 - SCP of Heap memory
+
+String str = "Sathya";
+String str1 = "Sathya";
+String str2 = "Ranjith";
+
+stack 		SCP
+str			"Sathya" - 
+str1 		
+str2 		Ranjith
+
+str1 = str1 + str2;
+str1 = SathyaRanjith
+
+str - Sathya - SathyaRanjith
+
+
+stack 		SCP
+str			"Sathya" - 
+str1 		SathyaRanjith
+str2 		Ranjith
+
+str1 = str1+"abc"
+
+stack 		SCP
+str			"Sathya" - 
+str1 		SathyaRanjithabc
+str2 		Ranjith
+			SathyaRanjith
+			
+String a = "new";
+a = a+"10";
+a = new10;
+
+Immutable concept 
+* It happens with String literals
+
+Variables practice
+	* local variable
+	* class level variable or instance variable
+	* static variable
+	
+Variable as a parameter
+
+
+Methods in Java
+1) method without return type
+2) method with return type
+3) static method
+4) non static method
+5) parameterized method
+6) Non parameterized method
 
 
 

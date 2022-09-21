@@ -1,12 +1,13 @@
-package test;
+package methods;
 
-public class Test {
+public class MethodCalling1 {
 	
-	static Test testObject123 = new Test();
+	static MethodCalling1 testObject123 = new MethodCalling1();
 
 	public static void main(String[] args) {
+		String a = "10";
 		System.out.println("Hello World");
-		Test testObject = new Test();
+		MethodCalling1 testObject = new MethodCalling1();
 		testObject.dummyMethod(); //method calling
 		staticMethod();
 		testObject123.dummyMethod();
@@ -15,7 +16,7 @@ public class Test {
 	public void dummyMethod() {
 		System.out.println("Test");
 		staticMethod();
-		Test testObject = new Test();
+		MethodCalling1 testObject = new MethodCalling1();
 		testObject.method1();
 		method1();
 //		testObject123
@@ -23,7 +24,7 @@ public class Test {
 
 	public static void staticMethod() {
 		System.out.println("Test static method");
-		Test tc = new Test();
+		MethodCalling1 tc = new MethodCalling1();
 		tc.method1();
 		method2();
 	}
