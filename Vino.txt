@@ -406,6 +406,9 @@ Variables practice
 	
 Variable as a parameter
 
+*************************************************************
+
+DAY 7
 
 Methods in Java
 1) method without return type
@@ -414,6 +417,8 @@ Methods in Java
 4) non static method
 5) parameterized method
 6) Non parameterized method
+
+
 
 
 

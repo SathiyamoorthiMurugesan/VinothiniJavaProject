@@ -1,13 +1,13 @@
-package methods;
+package basics;
 
-public class MethodCalling1 {
+public class ObjectCreationAndMethodCalling1 {
 	
-	static MethodCalling1 testObject123 = new MethodCalling1();
+	static ObjectCreationAndMethodCalling1 testObject123 = new ObjectCreationAndMethodCalling1();
 
 	public static void main(String[] args) {
 		String a = "10";
 		System.out.println("Hello World");
-		MethodCalling1 testObject = new MethodCalling1();
+		ObjectCreationAndMethodCalling1 testObject = new ObjectCreationAndMethodCalling1();
 		testObject.dummyMethod(); //method calling
 		staticMethod();
 		testObject123.dummyMethod();
@@ -16,7 +16,7 @@ public class MethodCalling1 {
 	public void dummyMethod() {
 		System.out.println("Test");
 		staticMethod();
-		MethodCalling1 testObject = new MethodCalling1();
+		ObjectCreationAndMethodCalling1 testObject = new ObjectCreationAndMethodCalling1();
 		testObject.method1();
 		method1();
 //		testObject123
@@ -24,7 +24,7 @@ public class MethodCalling1 {
 
 	public static void staticMethod() {
 		System.out.println("Test static method");
-		MethodCalling1 tc = new MethodCalling1();
+		ObjectCreationAndMethodCalling1 tc = new ObjectCreationAndMethodCalling1();
 		tc.method1();
 		method2();
 	}
