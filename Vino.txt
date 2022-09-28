@@ -419,6 +419,8 @@ Methods in Java
 6) Non parameterized method
 
 
+returned type in java
+	see the example classes created
 
 
 

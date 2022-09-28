@@ -4,20 +4,81 @@
 // * Whenever we use a return type in a method, store the method return value in a variable and use that variable wherever we want to use the method.
 // * Whenever there is return type mentioned, at the end of method, we need to use "return" keyword, after that we should not be writing anything
 //   		* means, return should be always at end of the methods 
-// * Return type can be anything such as Class, primitive and non-premitive data type, String, Array, Collections and Objects too
+// * Return type can be anything such as Class, primitive and non-premitive data type such String and Array, Collections and Objects too
 // * So, whenever we have a method with return type, it does some work and give us some value
 // * Either we can directly use the method in some other method or we assign method's return type to respective variable
 // * Return keyword can have exact return type or its variable name
 //	* Parameters can be methods with return type too
 
-
 package basics;
 
 public class ReturnDefinition {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	static String zz;
 
+	public static void main(String[] args) throws InterruptedException {
+		ReturnDefinition test = new ReturnDefinition();
+		zz = test.methodWithReturnType();
+		test.method1();
+		test.method2();
+//		Object testObject = new Object(); 
+		Object testObject = test.methodWithReturnTypeAsObject(); // this line is nothing but about line;
+		testObject.wait();
+
+	}
+
+	public String methodWithReturnType() {
+		String test = "Sathya";
+		System.out.println(test);
+		return test;
+//		return "Sathya";
+//		System.out.println("Abc");
+	}
+
+	public void method1() {
+//		String xx = methodWithReturnType();
+		System.out.println(zz);
+//		doing some other work in this method by getting the value from the above method
+//		method1 just want the value from "method with return type method". 
+//		so method1 not worrying about what happening inside "method with return type method".
+	}
+
+	public void method2() {
+//		String yy = methodWithReturnType();
+		System.out.println(zz);
+	}
+
+	public Object methodWithReturnTypeAsObject() {
+		ReturnDefinition test = new ReturnDefinition();
+//test.
+		return test;
+	}
+
+	public int method3(int a) {
+
+		return 30;
+	}
+	
+	public int method4(int ab) {
+		
+		return ab;
+	}
+	
+	public int method5(int abc) {
+		int test = abc;
+		return abc;
+	}
+	
+	int test;
+	public int method6(int aa) {
+		
+		test = aa;
+		return test;
+	}
+	
+	public String method7(int aa) {
+		String testName = "Sathya";
+		return testName;
 	}
 
 }

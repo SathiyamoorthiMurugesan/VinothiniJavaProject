@@ -44,6 +44,19 @@ public class ReturnType3 {
 		
 	}
 	
+	int amount;
+	public void methodWithClassVariableReturnType() {
+		System.out.println(amount);//0
+		amount = buySoap();
+		System.out.println(amount);//50
+	}
+	
+	public void changeClassVariableValue() {
+		System.out.println(amount); //50
+		amount = 51;
+		System.out.println(amount);
+	}
+	
 	
 
 }
