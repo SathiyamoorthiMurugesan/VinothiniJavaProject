@@ -423,6 +423,73 @@ returned type in java
 	see the example classes created
 
 
+*****************************************************************************
+
+DAY 8
+
+Revisited Return type
+
+String Basics:
+
+* Sequence of character (Basic Explanation)
+* In Java, It is array of character
+* In Java String is a Class
+* Why it is class, because we can perform many operations on String
+* if my String is "Sathya", length - 6, index starts with 0. Then last index is 5 or I can say length() -1;
+
+How do we define String
+
+String str = "Raj"; - Literals 
+String str1 = new String("Ranjith"); - Instance or object creation
+
+****************************************************************************
+
+DAY 9
+
+Interface in Java
+
+
+***************************************************************************
+
+DAY 10
+
+Abstract class in details
+
+
+
+OOPs concept
+
+Object Oriented Program means everything in the program is considered as Object
+
+Java is OOP language but not 100% OOPs language. Primitive date type (int, float, etc.), they are not object. 
+
+Root class of Java is Object. Means, if you create any class, Object class is always extended. But it is implicitly used.
+
+public class ClassA {
+
+} 
+
+this is nothing but 
+
+public class ClassA extends Object {
+
+}
+
+OOPs Concepts in Java
+
+1. Encapsulation
+2. Abstraction
+3. Inheritance
+4. Polymorphism
+
+Try the below things in each of the concepts follows
+VARIABLES
+ACCESS MODIFIERS
+METHODS - parameters or return type
+STATIC
+Obejct creation
+
+
 
 
 
