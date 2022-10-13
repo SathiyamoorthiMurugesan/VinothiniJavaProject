@@ -1,6 +1,7 @@
 package inheritanceInJava;
 
-public class InheritanceDemo1 {
+//public class InheritanceDemo1 {
+public class InheritanceDemo1 extends Object{
 	
 	int a = 10;
 	String str1 = "Sathya";
@@ -21,7 +22,7 @@ public class InheritanceDemo1 {
 		System.out.println("I am static, parameterized parent method3");
 	}
 	
-	public static void Parentmethod4(int a, int b) {
+	public static void Parentmethod3(int a, int b) {
 		System.out.println("I am static, two parameterized parent method4");
 	}
 	
@@ -30,9 +31,15 @@ public class InheritanceDemo1 {
 		InheritanceDemo1 parent = new InheritanceDemo1();
 		parent.Parentmethod1();
 		parent.Parentmethod2(100);
+//		parent.
 		
 		Parentmethod3("Sathya");
-		Parentmethod4(20, 30);
+		Parentmethod3(20, 30);
+//		Parentmethod3("20");
+//		Parentmethod3(20);
+		
+		System.out.println(parent.a);
+		System.out.println(b);
 	}
 
 }

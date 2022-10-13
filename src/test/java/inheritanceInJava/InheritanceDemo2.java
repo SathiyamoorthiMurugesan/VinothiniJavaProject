@@ -36,6 +36,7 @@ public class InheritanceDemo2 extends InheritanceDemo1{
 		InheritanceDemo2 obj1 = new InheritanceDemo2();
 		obj1.Parentmethod1();
 		obj1.childMethod1();
+//		obj1.
 		
 		childMethod3("abc");
 		Parentmethod3("aaa");
@@ -43,6 +44,7 @@ public class InheritanceDemo2 extends InheritanceDemo1{
 		
 		InheritanceDemo1 parentObj = new InheritanceDemo1();
 		parentObj.Parentmethod1();
+//		parentObj.childMethod2(10);
 		
 		InheritanceDemo1 childParentObj = new InheritanceDemo2();
 		childParentObj.Parentmethod1();

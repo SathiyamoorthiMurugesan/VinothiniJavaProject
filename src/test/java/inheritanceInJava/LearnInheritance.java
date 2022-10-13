@@ -1,9 +1,5 @@
 package inheritanceInJava;
 
-import java.util.AbstractList;
-import java.util.List;
-import java.util.RandomAccess;
-
 public class LearnInheritance implements InheritanceInterface1{
 	
 //	Parent class/ Super class
@@ -46,6 +42,9 @@ public class LearnInheritance implements InheritanceInterface1{
 //	public class ArithmaticException extends Exception;
 //	public class Exception extends Throwable;
 //	public class Throwable implements Serializable;
+	
+	
+//	Every class in java is always extended by Object class.
 
 	public static void main(String[] args) {
 		

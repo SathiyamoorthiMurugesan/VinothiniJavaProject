@@ -489,9 +489,24 @@ METHODS - parameters or return type
 STATIC
 Obejct creation
 
+***********************************************************************
+
+DAY 11
+
+Inheritance
 
 
 
+*************************************************************************
+
+DAY 12
+
+Polymorphism
+
+* depends on 
+	1) inheritance
+	2) object creation
+	3) method signature (method name and parameters(with or without))
 
 
 
