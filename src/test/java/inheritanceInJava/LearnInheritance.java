@@ -44,7 +44,7 @@ public class LearnInheritance implements InheritanceInterface1{
 //	public class Throwable implements Serializable;
 	
 	
-//	Every class in java is always extended by Object class.
+//	Every class in java is always extended by Objecy c
 
 	public static void main(String[] args) {
 		

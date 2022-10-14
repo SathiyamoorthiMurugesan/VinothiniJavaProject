@@ -1,7 +1,7 @@
-package inheritanceInJava;
+package objectCreationWithInheritance;
 
-public class InheritanceDemo1 {
-	
+public class ClassA {
+
 	int a = 10;
 	String str1 = "Sathya";
 	
@@ -25,14 +25,20 @@ public class InheritanceDemo1 {
 		System.out.println("I am static, two parameterized parent method4");
 	}
 	
-
-	public static void main(String[] args) {
-		InheritanceDemo1 parent = new InheritanceDemo1();
-		parent.Parentmethod1();
-		parent.Parentmethod2(100);
-		
-		Parentmethod3("Sathya");
-		Parentmethod4(20, 30);
+	private void parentMethod5() {
+		System.out.println("I am private method from parent class");
 	}
-
+	
+	public static void main(String[] args) {
+		ClassA obj1 = new ClassA();
+		obj1.Parentmethod1();
+		obj1.parentMethod5();
+		
+		ClassB obj2 = new ClassB();
+		obj2.childMethod1();
+		obj2.Parentmethod1();
+		
+		ClassC obj3 = new ClassC();
+		obj3.childMethod1();
+	}
 }
