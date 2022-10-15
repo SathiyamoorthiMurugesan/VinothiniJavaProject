@@ -32,6 +32,12 @@ public class NormalClass extends AbstractDemo1{
 		AbstractDemo1.method6();
 		method6();
 	}
+
+	@Override
+	public void method11() {
+		// TODO Auto-generated method stub
+		
+	}
 		
 
 }

@@ -543,6 +543,32 @@ Overriding
 * It happens between two classes (Parent and child class) - Inheritance concept
 * Method name should be same and parameter also should be same
 
+*********************************************************************************************
+
+DAY 13
+
+Constructor
+
+Object creation
+
+ClassA obj = new ClassA();
+
+ClassA obj1 = new ClassA();
+ClassA obj2 = new ClassA();
+
+ClassA obj = new ClassA();
+ClassA obj = new ClassA(20);
+ClassA obj = new ClassA("Text");
+
+public void method() { }
+
+obj.method();
+obj.method(10);
+
+public ClassA() {
+
+}
+
 
 
 

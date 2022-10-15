@@ -1,6 +1,5 @@
 package overloading;
 
-
 //* Its based on method signature
 //	* Method name should be same
 //	* Parameters should vary
@@ -13,54 +12,52 @@ package overloading;
 //		* Means, if two methods have same method signature and have different return types then we will see error as duplicate method.
 //* We can overload static method
 
-
 public class OverloadingDemo1 {
-	
+
 	int a;
 	String str;
 	float f;
 	double d;
 	long l;
-	
+
 	public void buySoap() {
 		System.out.println("Buy soap");
 	}
-	
+
 //	private void buySoap() {
 //		System.out.println("Buy soap");
 //	}
-	
+
 //	public String buySoap(String soapName) {
 //		System.out.println("Buy soap");
 //		return soapName;
 //	}
-	
+
 	public void buySoap(String soapName) {
-		System.out.println("Buy "+soapName+ " soap");
+		System.out.println("Buy " + soapName + " soap");
 	}
-	
+
 	public void buyRice(String riceName) {
 		System.out.println("");
 	}
-	
+
 	public String buySoap(int soapAmount) {
-		System.out.println("Buy soap for "+soapAmount);
+		System.out.println("Buy soap for " + soapAmount);
 		return "";
 	}
-	
+
 	public void buySoap(String soapName, int soapAmount) {
-		System.out.println("Buy "+soapName+ " for amount "+soapAmount);
+		System.out.println("Buy " + soapName + " for amount " + soapAmount);
 	}
-	
+
 	public void buySoap(int soapAmount, String soapName) {
-		System.out.println("For amount "+soapAmount+ ", buy "+soapName+" soap");
+		System.out.println("For amount " + soapAmount + ", buy " + soapName + " soap");
 	}
 
 	public static void main(String[] args) {
-		
-		
+
 		OverloadingDemo1 od = new OverloadingDemo1();
-		
+
 		System.out.println(od.a);
 		System.out.println(od.str);
 		System.out.println(od.f);
@@ -71,7 +68,6 @@ public class OverloadingDemo1 {
 		od.buySoap(50);
 		od.buySoap(20, "Lux");
 		od.buySoap("Lux", 100);
-		
 
 	}
 
