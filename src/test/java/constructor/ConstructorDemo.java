@@ -13,7 +13,7 @@
 
 //* How to call constructor?
 //	It can be called by creating an object.
-//	By default when an object iscreated default constructor will be called implicitly. 
+//	By default when an object is created default constructor will be called implicitly. 
 //		ConstructorDemo test = new ConstructorDemo();
 //	Also you can call parameterized constructor by passing parameter explicitly .
 //		ConstructorDemo test1 = new ConstructorDemo(10);
@@ -42,7 +42,7 @@
 
 //* Can constructor can be private?
 //		* Yes we can make it as private. But it cannot be used/call outside the class.
-//		* Which means, if a constructor is private, we can not creat object for that class in some other class. (abstraction?)
+//		* Which means, if a constructor is private, we can not create object for that class in some other class. (abstraction?)
 
 //*	Can constructor be static?
 //		No, we can have only default, public,private and protected modifier for the constructor.
