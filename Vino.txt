@@ -569,6 +569,47 @@ public ClassA() {
 
 }
 
+*****************************************************************
+DAY 14
+
+Constructor continuation
+
+
+***************************************************************************************
+
+DAY 15
+
+Keywords in Java
+
+access modifiers
+data types
+class, interface, package, abstract
+return types, return
+extends, implements
+new
+
+
+final
+static
+super
+this
+
+static
+ * always belongs to the class
+ * object creation not needed
+ * static members within a class - direct calling
+ * static members outside a class - className.staticMemberName
+ * we can overload static method
+ * we can not override static method
+ * In interface, we can create a methods with body but that method should be either static or default
+ 
+ 
+Final
+ * we have to initiate while declaring
+ * Once value its initalized, we cant change the value at any point
+ * we can use final with variables, methods and class
+ * 
+ 
 
 
 
