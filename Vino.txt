@@ -618,6 +618,19 @@ Super and this keywords
 
 super() and this() 
 
+*********************************************************************
+
+DAY 17
+
+Errors and Exceptions 
+
+try catch finally
+
+
+#######################
+
+Throw Throws Throwable
+
 
 
 
