@@ -16,7 +16,7 @@ public class ReturnTypeOverridingDemo2 extends Parent1{
 		return 0;
 	}
 	
-	public int buyShampoo() {
+	public int buyShampooA() {
 		System.out.println("Buy Lux soap");
 		return 0;
 	}

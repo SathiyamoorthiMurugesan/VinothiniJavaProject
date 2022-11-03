@@ -4,7 +4,7 @@
 //	* in child class method, then we use super keyword to call parent class overridden method or variable.
 
 //* All child class constructors have super() method written implicitly.
-//* If we writtent super() explicitly, we cant use this() inside constructor. 
+//* If we written super() explicitly, we cant use this() inside constructor. 
 //	But while super() is implicit, we can use this(). So in this case we can use both super() and this();
 //* super(); 
 //* whenever we call a child class constructor, parent class constructor will be always called because
@@ -13,6 +13,10 @@
 //* Parameter passed in child class constructor wont be passed to super()
 //* If we want our child class's parameterized constructor to call parent class's parameterized constructor,
 //	* then we need to pass the parameter to super() by overriding it. e.g(super(5) or super("Sathya"))
+
+//* From child class constructor, we can either call parent class constructor(super()) or child class constructor(this()).
+
+
 package keywordsInJava;
 
 public class SuperDemo extends ParentSuperDemo {
