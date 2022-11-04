@@ -111,12 +111,41 @@ public class ForLoopBasic {
 //			}
 //		}
 
-		for (int i = 1; i <= 5; i++) {
-			for (int j = 1; j <= 5; j++) {
-				System.out.print( j+" ");
+//		for (int i = 1; i <= 5; i++) {
+//			for (int j = 1; j <= 5; j++) {
+//				System.out.print( j+" ");
+//			}
+//			System.out.println();
+//		}
+
+//		for (int a = 1; a <= 10; a++) {
+//			if(a>5) {
+//				break;
+//			}
+//			System.out.println(a+"&&&&&&");
+//		}
+
+//		int temp = 5;
+//		for (int a = 1; a <= 10; a++) {
+//			if(a>temp) {
+//				break;
+//			}
+//			System.out.println(a+"&&&&&&");
+//		}
+
+		
+		int val = 29;
+		int temp = 0; //flag or indicator
+		System.out.println("PRIME NUMBER CHECK*********");
+		for (int a = 2; a < val - 1; a++) {
+			if (val % a == 0) {
+				temp ++;
+				System.out.println(val+ " is not prime number");
+				break;
 			}
-			System.out.println();
 		}
+		if(temp != 1)
+		System.out.println(val+" is prime number");
 
 	}
 
