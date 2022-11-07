@@ -631,7 +631,7 @@ try catch finally
 
 Throw Throws Throwable
 
-**************************************************
+*****************************************************************
 
 DAY 18
 
@@ -641,9 +641,42 @@ for
 
 for each
 
-********************************************
+********************************************************************
 
+DAY 19
+
+switch 
+
+Scanner
+
+*************************************************************************
  
+Different ways to provide inputs
+
+1. hard code input value
+2. file reading (text file, prop file, excel, pdf)
+3. Directly get the value from the application itself then use it as a input
+4. Take input from DB.. RDBMS, DBMS
+
+
+##########################################
+
+Arrays
+
+int a = 1;
+int b = 2;
+int c = 10;
+
+same kind of data type 
+size fixed
+
+
+int array1[] = new int[5];
+int[] array2 = new int[5];
+int array3[] = {1, 2, 3, 4, 5};
+int[] array4 = {1, 2, 3, 4, 5};
+int[] array5 = new int[] {11, 22, 33};
+array5[index];
 
 
 
