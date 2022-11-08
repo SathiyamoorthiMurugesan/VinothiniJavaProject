@@ -680,7 +680,32 @@ array5[index];
 
 Array practice using methods
 
+String practice 
+
+String str = "";
+String str1 = "        ";
+String str2 = "Sathya";
+
+str2[0] = 'S';
+.
+.
+.
+str2[5] = 'a';
+
+str2.charAt(3) = 'h';
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+* Why String is immutable 
+* try String methods 
+* String array practice
+
 *********************************************************************
+
+Two dimention array
+jaggered array
+String buffer 
+String builder
 
 
 
