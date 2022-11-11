@@ -14,6 +14,10 @@
 //		* new - key word in java
 //		* 5 - size
 
+//* If we declare array with size 4 and initialize only 3 values then 4th value would be default value of that array data type. 
+//		if its int array, 4th value 0
+//		if its String array, then null
+
 //	* We can not directly sysout array. For that, we need to use either Arrays class or for loops
 //		* Arrays is a pre-defined class in Java.
 //		* It contains many static methods to manipulate and access array elements
@@ -41,6 +45,8 @@ public class DemoArray {
 //		ar[4] = 45;
 
 		System.out.println(ar);
+		
+		System.out.println(ar[0]);
 
 		obj.returnSingleValueFromAnIntArray(0);
 		obj.returnSingleValueFromAnIntArray(1);

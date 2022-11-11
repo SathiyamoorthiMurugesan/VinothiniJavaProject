@@ -650,7 +650,8 @@ switch
 Scanner
 
 *************************************************************************
- 
+
+
 Different ways to provide inputs
 
 1. hard code input value
@@ -701,11 +702,22 @@ str2.charAt(3) = 'h';
 * String array practice
 
 *********************************************************************
-
+DAY 20
 Two dimention array
 jaggered array
+Arrays class
+debug mode
+
+*********************************************************************
+
+DAY 21
+Threads in Java
 String buffer 
 String builder
+
+*************************************************************************
+
+
 
 
 
