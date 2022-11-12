@@ -715,7 +715,28 @@ Threads in Java
 String buffer 
 String builder
 
-*************************************************************************
+https://www.java67.com/2018/04/21-string-programming-and-coding-interview-questions-answers.html
+
+try with one word string
+1) reverse a string 
+2) In a string, remove the duplicate letters
+3) In a string, get count of each letter 
+4) In a string find the letter which occured max times
+
+
+try with a sentence 
+1) Count no of words in the sentence
+2) Remove duplicate words in a sentence
+3) Count each words 
+4) Find the word which occurs multiple time
+5) Find the word which occured most
+
+mostly we use the below concepts
+array, string methods, for, if and temp variable
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Wrapper class in Java
 
 
 
