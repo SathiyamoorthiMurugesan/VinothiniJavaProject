@@ -5,21 +5,48 @@ import java.util.Scanner;
 public class CharArray {
 
 	static int sizeOfChar;
-	
+	static char name[] = new char[] { 'v', 'a', 't', 'h', 'y', 'a' };
+
 	public static void main(String[] args) {
-//		 clarificationNeeded();
-//		 funtion();
-		getCharArraySize();
-		System.out.println("Please provide" + sizeOfChar +" inputs:");
-		char[] characterPrint = getCharArrayValueFromUserWithReturn(sizeOfChar);
-		PrintCharArrayValuegetFromUser(characterPrint);
+		// methodn();
+		// int length1 = FindLengthOfArray(name);
+		// arrayCalculation(length1);
+		forEachArray(name); // for each character array
+
+		// clarificationNeeded();
+		// getCharArraySize();
+		// System.out.println("Please provide" + sizeOfChar +" inputs:");
+		// char[] characterPrint = getCharArrayValueFromUserWithReturn(sizeOfChar);
+		// PrintCharArrayValuegetFromUser(characterPrint);
+	}
+
+	public static int FindLengthOfArray(char array[]) {
+		int length = array.length;
+		System.out.println("length of stirng : " + length);
+		return length;
+	}
+
+	public static void arrayCalculation(int length) {
+
+		char name2[] = { 'S', 'a', 't', 'h', 'y', 'a', 'h' };
+		int length3 = name2.length;
+		if (length3 == length) {
+			System.out.println("ready to go");
+		} else {
+			System.out.println("is not equals and keep trying");
+		}
+	}
+
+	public static void forEachArray(char name[]) {
+		for (char nameString : name) {
+			System.out.print(nameString);
+		}
 	}
 
 	public static void getCharArraySize() {
 		System.out.println("Enter Array Size");
 		Scanner scan = new Scanner(System.in);
 		sizeOfChar = scan.nextInt();
-		
 		// getCharArrayValueFromUser(sizeOfChar);
 	}
 
@@ -54,23 +81,21 @@ public class CharArray {
 		}
 	}
 
-	public static void funtion() {
-		char[] c = new char[] { 'C', 'D', 'E' };
-		for (int i = 0; i < 3; i++) {
-			System.out.println(c[i]);
-		}
-	}
+	// just for clarification below
 
 	public static void clarificationNeeded() {
-		char[] C = new char[5];
-		char[] c = { 'd', 'g' };
+		// char[] c = new char[5];
+		/* char or byte */ byte[] c = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'i' };
 
-		System.out.println(c);
+		for (int i = 0; i < 8; i++) {
+
+			System.out.println(c[i]);
+		}
 
 		int[] a = new int[3];
 		int[] a1 = { 1, 3 };
 
-		System.out.println(a1);
+		// System.out.println(a1);
 	}
 
 }

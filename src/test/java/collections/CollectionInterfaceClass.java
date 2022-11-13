@@ -1,5 +1,9 @@
 /*
 	
+	<E> - Class we use inside a collection
+	<T> - Collection name 
+	 O - Elements of the collection
+	
 1) What is collection
 	* Collection is a framework in java
 	* It contains packages, interfaces and classes which helps us to store and process data efficiently.
