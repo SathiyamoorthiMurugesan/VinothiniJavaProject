@@ -104,9 +104,9 @@
 	* One key can hold only one value
 	* Map allows one null key and multiple null values
 	* The Map interface provides three views, which allow a map's contents to be viewed as 
-	* 	a set of keys, 
-	* 	collection of values,
-	* 	or set of key-value mappings.
+	* 	a set of keys, //keySet()
+	* 	collection of values, //values()
+	* 	or set of key-value mappings. //entrySet()
 	* Useful methods in Map interface
 	* 	size();
 	* 	isEmpty();
