@@ -61,7 +61,7 @@
 //	HashSet
 //	LinkedHashSet
 //	TreeSet
-//	HashMap
+//	HashMapPractice
 //	LinkedHashMap
 //	TreeMap
 

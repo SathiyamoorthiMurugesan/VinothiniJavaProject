@@ -68,7 +68,7 @@ public class ArrayListClass {
 //	HashSet
 //	LinkedHashSet
 //	TreeSet
-//	HashMap
+//	HashMapPractice
 //	LinkedHashMap
 //	TreeMap
 	

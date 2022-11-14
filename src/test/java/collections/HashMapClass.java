@@ -10,27 +10,27 @@ import java.util.Set;
 
 public class HashMapClass {
 	
-	/* HashMap
+	/* HashMapPractice
 	 * 	Refer Map section in CollectionInterfaces.java
 	 * 
-	 * Different ways to declare HashMap
-	 * 	Map <String, Integer> marks = new HashMap <String, Integer> ();
-	 * 	HashMap <String, Integer> marks = new HashMap <String, Integer> ();
-	 *	HashMap <String, Integer> marks1 = new HashMap <String, Integer> (marks);
-	 *	HashMap <String, Integer> marks2 = new HashMap <String, Integer> (10);
+	 * Different ways to declare HashMapPractice
+	 * 	Map <String, Integer> marks = new HashMapPractice <String, Integer> ();
+	 * 	HashMapPractice <String, Integer> marks = new HashMapPractice <String, Integer> ();
+	 *	HashMapPractice <String, Integer> marks1 = new HashMapPractice <String, Integer> (marks);
+	 *	HashMapPractice <String, Integer> marks2 = new HashMapPractice <String, Integer> (10);
 	 * 	
 	 * keyset() - will return set of keys. Return type - Set
 	 * values() - Will return Collection of values. Return type - Collection
 	 * For iterating we cannot use for loop, but we can use other types
 	 * 
-	 * forEach(), replaceAll() and clone() methods are overridden in HashMap
+	 * forEach(), replaceAll() and clone() methods are overridden in HashMapPractice
 	 * In Maps, we cannot use forEach() method on either keys or values. We can only use for keys and values pair.
 	 */
 
 	public static void main(String[] args) {
 		HashMap <String, Integer> marks = new HashMap <String, Integer> ();
-//		HashMap <String, Integer> marks1 = new HashMap <String, Integer> (marks);
-//		HashMap <String, Integer> marks2 = new HashMap <String, Integer> (10);
+//		HashMapPractice <String, Integer> marks1 = new HashMapPractice <String, Integer> (marks);
+//		HashMapPractice <String, Integer> marks2 = new HashMapPractice <String, Integer> (10);
 		
 		marks.put("English", 75);
 		marks.put("Maths", 100);
