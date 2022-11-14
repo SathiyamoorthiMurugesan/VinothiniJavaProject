@@ -197,12 +197,12 @@ JDK - Java Developement kit
 
 --------------------------------------
 
-What is eclipse
+What is eclipse (IDE)
 
 Its an editor to edit and view your project or project files
 While writing itself, it will notify us about complilation errors
 
-Its a user interface to view your project or file in a easy way
+Its a user interface to view your project or file in an easy way
 
 tab
 drag and drop
@@ -212,6 +212,8 @@ drag and drop
 	* Java
 	* Debug
 	* Git
+	
+* window
 
 
 *****************************************************************************************
@@ -219,6 +221,20 @@ drag and drop
 DAY 4
 
 Maven
+
+GroupID
+Artifact ID 
+verision
+
+Facebook jar
+Meta 
+facebook
+version 1.1.100
+
+Insta jar
+Meta
+Insta
+version 10.1.10
 
 * Dependency Management tool
 * we dont need to download any jar files(dependency).
@@ -641,6 +657,10 @@ for
 
 for each
 
+break and continue
+
+debug
+
 ********************************************************************
 
 DAY 19
@@ -648,6 +668,10 @@ DAY 19
 switch 
 
 Scanner
+
+getter and setter 
+
+Thread
 
 *************************************************************************
 
@@ -694,6 +718,10 @@ str2[0] = 'S';
 str2[5] = 'a';
 
 str2.charAt(3) = 'h';
+
+Two dimention array
+jaggered array
+Arrays class
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
@@ -750,7 +778,10 @@ DAY 24
 
 Map
 
+************************************************
+May 25
 
+getter and setter
 
 
 
