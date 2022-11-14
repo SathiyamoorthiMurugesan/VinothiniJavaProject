@@ -249,6 +249,12 @@ Git
 We can store our project code in a proper structure. 
 It will help us to reduce time and many people can work on a project at a same time 
 
+1. Create a project in local (our system)
+2. Create git account
+3. Create a repo in your git account (remote)
+4. We view our local project in system through Eclipse
+5. We need to connect our Eclipse with Git repo
+
 upload project in Git
 
 Steps to upload project in Git hub
@@ -781,7 +787,83 @@ Map
 ************************************************
 May 25
 
+Map entrySet() 
+
 getter and setter
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Selenium Basics
+
+
+SELENIUM
+
+* Its only for web application automation
+
+BASICs for understanding selenium 
+
+* what are the actions we do on a browser
+
+browser open
+url enter
+new tab open
+tab close 
+min 
+max
+entire browser close
+scroll
+zoom
+navigate - back, forward, refresh
+
+With in application what do we do
+
+application launch - url type
+text enter
+button click
+check box click
+radio box click
+drop down
+links click
+Text read/verify
+Tab title
+Mouse hover
+double click
+Right click
+Date choose
+Drag and drop
+File upload
+Verification/Assert 
+page load speed/time
+Keyboard
+pop up
+	alert
+	tab
+	web alert like info screen
+frames
+wait
+WebTable
+
+
+Who is tester in Automation? ---- WebDriver(Tester)
+
+Each window has an UNIQUE ID (String) --- Window Handle
+
+Session ID also created when we run WebDriver each time.
+
+Whatever element you see on a web page is called WebElement
+
+**********************************************************************************************
+
+Try reading a text from a text file (simple text)
+Try reading a text from a property  file (key value pair -- name = Vino)
+
+DAY 26
+
+
+How to find element in a page 
+What is DOM
+Who is brower? 
+
 
 
 
