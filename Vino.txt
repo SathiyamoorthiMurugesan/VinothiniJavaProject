@@ -333,11 +333,11 @@ public static void thisIsStaticMethod() {
 
 Methods in Java
 
-1) main method 
+1) main method  - NOT needed
 2) static method
 3) non static method
 
-With in a class
+With in a class (static is always one step above - like higher class )
 * calling static method from a static method - directly call
 * calling static method from a non static method - directly call 
 
@@ -729,6 +729,8 @@ Two dimention array
 jaggered array
 Arrays class
 
+getter and setter
+
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 * Why String is immutable 
@@ -852,17 +854,201 @@ Session ID also created when we run WebDriver each time.
 
 Whatever element you see on a web page is called WebElement
 
+What is WebElement
+	* DOM (right click on a page and inspect or F12 or Ctrl+Shift + I)
+	* diff types of tags
+		* html
+		* body
+		* header
+		* div
+		* ul
+		* li
+		* a 
+		* select (drop down)
+		* frame or iframe (small html)
+		* table
+			* tr 
+			* th
+			* td
 **********************************************************************************************
 
 Try reading a text from a text file (simple text)
 Try reading a text from a property  file (key value pair -- name = Vino)
+***************************************************************************************
+DAY 26 & 27
 
-DAY 26
+Whatever element you see on a web page is called WebElement
+
+What is DOM?
+
+What is WebElement
+	* DOM (right click on a page and inspect or F12 or Ctrl+Shift + I)
+	* diff types of tags
+		* html
+		* body
+		* header
+		* div
+		* ul
+		* li
+		* a 
+		* select
+		* table
+			* tr 
+			* th
+			* td
+* attributes
+	whatever key value pair we see inside any tag is called attributes
 
 
 How to find element in a page 
-What is DOM
+
+<html>
+
+ancestor(div)
+  parent(div)
+	parent(li)
+		child(ul)
+			child(select)
+		child(ul)
+			child(li)
+			child(li)
+	parent(ul)
+	parent(li)
+ancestro(div)
+
+</html>
+
+ancestor
+parent
+child
+siblings
+following ancestor, parent, child, siblings
+preceding ancestor, parent, child, siblings
+text
+contains(text, 'Sathya')
+
+
+
+
+
+
+We find elements in a page using locators 
+
+Locators in selenium - 
+id 
+	* do not use if it has numbers in it. 
+name
+className
+	* with more spaces 
+tagName
+linkText
+partialLinkText
+CSS selector
+xpath
+
+id, name, className(class) - when these values are unique we can use them directly. When they are not unique, we use either xpath or CSS
+
+findElement(By.id(""));
+findElement(By.name(""));
+findElement(By.class(""));
+findElement(By.linkText("selenium"));
+findElement(By.linkText("Testing Frameworks"));
+findElement(By.linkText("Logging Frameworks"));
+findElement(By.parialLinkText("Frameworks"));
+
+
+
+
+
+XPATH 
+
+two types of xpath
+
+absolute xpath - steps 
+	* uses single slash - /html/body/header/div/nav/a[1]
+	
+relative xpath - lift
+	* uses double slash
+	* syntax
+		//tagName[@attribute = 'value']
+		
+https://www.guru99.com/xpath-selenium.html#text
+https://www.guru99.com/locators-in-selenium-ide.html
+
+
+
+
+
+
+
 Who is brower? 
+
+Browsers
+* Chrome
+* Firefox
+* MS edge
+* Opera Mini
+* Internet Explorer
+* UC browser
+
+Hirarchy 
+* SearchContext Interface (findElement, findElements)
+* WebDriver Interface ( Basic methods for a browser) 
+* RemoteWebDriver Class( all basic methods are implemented here)
+* Classes ChromeDriver, FirefoxDriver, etc..  
+
+SearchContext 
+ 1) WebElement findElement(By by) 
+ 2) List<WebElement> findElements(By by)
+ 
+WebDriver 
+get()
+  * In this method only we pass application URL
+currentUrl()
+	* It gives currently focused window's URL. So that we can validate against requirement that, URL is correct 
+close()
+ 	* Closes the currently focused window
+quite()
+	* Closes all the window's opened during the session
+getTitle()
+	* Gives the title of the window (tab tile) 
+getWindowHandle()
+	* It gives current window's handle
+	* Its good practice to use getWindowHandle() method, before using getWindowHandles() method
+	* This methods return type is String
+	
+getWindowHandles()
+	* It gives all window's handles opened during that session
+	* This methods return type is Set<String>
+	
+TargetLocator switchTo()
+	WebDriver frame(int index);
+	WebDriver frame(String nameOrId);
+	WebDriver frame(WebElement frameElement);
+	WebDriver parentFrame();
+	WebDriver window(String nameOrHandle);
+	WebDriver newWindow(WindowType typeHint);
+	WebDriver defaultContent();
+	WebElement activeElement();
+	Alert alert();
+	
+navigate()
+manage()
+	
+
+
+Concepts in Java
+
+* Window Handle
+
+
+
+
+
+
+
+
+
 
 
 
