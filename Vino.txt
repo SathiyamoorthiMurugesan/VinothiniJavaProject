@@ -875,7 +875,7 @@ What is WebElement
 Try reading a text from a text file (simple text)
 Try reading a text from a property  file (key value pair -- name = Vino)
 ***************************************************************************************
-DAY 26 & 27
+DAY 26 & 27 & 28
 
 Whatever element you see on a web page is called WebElement
 
@@ -1022,6 +1022,22 @@ Browsers
 * Internet Explorer
 * UC browser
 
+
+
+
+Diff between Chrome browser and Chrome driver 
+
+	We have to use specific driver for specific version of a browser
+	
+chrome - ChromeDriver - we need to download chromeDriver.exe, while running code, we have to let WebDriver about its path.
+Instead of running chrome.exe from our system, we ask webDriver to run ChromeDriver.exe
+For each browser, we need to take compatible verision of its driver.
+for eg: For chrome version 107, we need to download chrome driver version 107.
+Basically we keep the chromeDriver.exe files inside project but we dont push them into git
+
+firefox - geckoDriver
+
+
 Hirarchy 
 * SearchContext Interface (findElement, findElements)
 * WebDriver Interface ( Basic methods for a browser) 
@@ -1030,7 +1046,13 @@ Hirarchy
 
 SearchContext 
  1) WebElement findElement(By by) 
+ 		WebDriver.findElement(By.id(""));
+ 		WebDriver.findElement(By.xpath("//strong[text() =  'ChromeDriver 108.0.5359.22']");
+ 
  2) List<WebElement> findElements(By by)
+ 		List<WebElement> allElements = WebDriver.findElements(By.id(""));
+ 		for(WebElement eachElement : allElelments) {
+ 		}
  
 WebDriver 
 get()
@@ -1057,20 +1079,112 @@ TargetLocator switchTo()
 	WebDriver frame(String nameOrId);
 	WebDriver frame(WebElement frameElement);
 	WebDriver parentFrame();
+
+	
+	1) find the frame - means identify the element for the frame
+		- we can identify the frame using 3 things.
+			1. using index
+			2. frameName
+			3. by finding element for the frame
+	2) switchTo().frame()
+	3) do some action on any element inside the frame 
+	4) switchTo().defaultContent();
+	
 	WebDriver window(String nameOrHandle);
+		****WebDriver.switchTo().window();*******
+		
+		String parentWindowHandle = WebDriver.getWindowHandle();
+		Set<String> allWindowHandles = WebDriver.getWindowHandles();
+		for(String eachWindowHandle : allWindowHandles) {
+			if(!eachWindowHandle.equals(parentWindowHandle)) {
+				WebDriver.switchTo().window(eachWindowHandle);
+				}
+			}
+		
 	WebDriver newWindow(WindowType typeHint);
 	WebDriver defaultContent();
 	WebElement activeElement();
+			
+			
+			
+			
+			
+			
+	
 	Alert alert();
+		dismiss();
+		accept();
+		getText();
+		sendKeys();
 	
-navigate()
-manage()
+What is alert - It distrubts the original flow.
+How to deal with alert - When an alert appears, we need to handle it
+How to confirm a popup is a alert or not - If its alert it will not allow us to acces the original window
+											We can not inspect alert at all.
+1) we expect alert and wrote code, but alert does not appear in the flow. 
+	- NoSuchAlertPresentException
+2) we are not expecting alert but an alert appears 
+	- UnhandledAlertException
+3) We know there is an alert but we did not write code to handle the alert
+	- UnhandledAlertException
+
+There are 3 types are alert 
+	1) informational alert 
+	2) prompt alert - ok/cancel, yes/no
+	3) input alert - We need to enter some input on the alert text box and click on ok
+
+How to deal with alert
+	1) first we need to switch in to the alert 
+		Alert alert = WebDriver.switchTo().alert();
+		alert.accept();
+		alert.dismiss();
+		alert.getText();
+		alert.sendKeys("Input text to alert);
+		
+		WebDriver.switchTo().alert().accept();
+		WebDriver.switchTo().alert().dismiss();
 	
 
 
-Concepts in Java
+
+
+Navigation navigate() - To navigate a page
+
+WebDriver.navigate().back();
+WebDriver.navigate().forward();
+WebDriver.navigate().refresh();
+WebDriver.navigate().to("www.facebook.com");
+
+
+
+
+
+Options manage() - To manage window 
+
+WebDriver.manage().addCookie();
+deleteCookie();
+deleteAllCookies();
+Timeouts timeouts();
+	WebDriver.manage().timeOuts().implicitlyWait();
+
+ Window window();
+ Dimension getSize()
+ 	WebDriver.manage().window().getSize();
+ 	WebDriver.manage().window().setPosition();
+ 	WebDriver.manage().window().minimize();
+ 	WebDriver.manage().window().maximize();
+ 	WebDriver.manage().window().fullscreen();
+ 	
+	
+
+
+Concepts covered in Selenium
 
 * Window Handle
+* Alert
+* frames
+
+
 
 
 
