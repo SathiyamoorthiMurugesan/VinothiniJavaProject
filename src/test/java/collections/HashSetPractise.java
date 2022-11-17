@@ -5,7 +5,7 @@ package collections;
 
 	/* HashSet
 	 * 	It implements Set Interface. 
-	 *  It is backed by a hash table, (actually a HashMap instance).
+	 *  It is backed by a hash table, (actually a HashMapPractice instance).
 	 *  This class permits the null element.
 	 * 	Its not synchronized
 	 * 	Does not maintain order

@@ -1,5 +1,9 @@
 /*
 	
+	<E> - Class we use inside a collection
+	<T> - Collection name 
+	 O - Elements of the collection
+	
 1) What is collection
 	* Collection is a framework in java
 	* It contains packages, interfaces and classes which helps us to store and process data efficiently.
@@ -117,7 +121,7 @@
 	* 	values();
 	* 	entrySet();
 	* 	A map entry (key-value pair).  The entrySet method returns a collection-view of the map, whose elements are of this class.  The
-	* 		interface Map.Entry<K, V> {
+	* 		interface Entry<K, V> {
 	* 			getKey();
 	* 			getValue();
 	* 			setValue(V value);

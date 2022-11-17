@@ -31,7 +31,7 @@ public class ArrayListClass {
 	 * 		grow();
 	 * 		newCapacity(int minCapacity);
 	 * 		hugeCapacity(int minCapacity);
-	 * 		clone();
+	 * 		g();
 	 * 			Since CLone() method returns Objects, we need to cast Object to ArrayList
 	 * 		add(E e, Object[] elementData, int s);
 	 * 		equalsRange(List<?> other, int from, int to) ;
@@ -68,7 +68,7 @@ public class ArrayListClass {
 //	HashSet
 //	LinkedHashSet
 //	TreeSet
-//	HashMap
+//	HashMapPractice
 //	LinkedHashMap
 //	TreeMap
 	
@@ -111,7 +111,8 @@ public class ArrayListClass {
 //		Collections.sort(cars);
 //		System.out.println(cars);
 		
-		ArrayList <String> cars1 = (ArrayList<String>) cars.clone();
+		ArrayList <String> cars1 = (ArrayList<String>) 
+		cars.clone();
 		System.out.println(cars1);
 		
 		System.out.println("******forEach method******");
