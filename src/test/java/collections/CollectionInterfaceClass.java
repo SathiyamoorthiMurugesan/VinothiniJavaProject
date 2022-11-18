@@ -121,7 +121,7 @@
 	* 	values();
 	* 	entrySet();
 	* 	A map entry (key-value pair).  The entrySet method returns a collection-view of the map, whose elements are of this class.  The
-	* 		interface Entry<K, V> {
+	* 		interface Map.Entry<K, V> {
 	* 			getKey();
 	* 			getValue();
 	* 			setValue(V value);

@@ -265,9 +265,9 @@ public class ArrayListPractice {
 		for (Object obj : dr)
 			System.out.println(obj);
 		System.out.println("After sorting");
-		 Collections.sort(dr,"gino");
-		for (Object obj : dr)
-			System.out.println(obj);
+//		 //
+//		for (Object obj : )
+//			System.out.println(obj);
 		
 		
 	//	dr.sort();
