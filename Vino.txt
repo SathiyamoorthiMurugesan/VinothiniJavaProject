@@ -941,7 +941,7 @@ name
 className
 	* with more spaces 
 tagName
-linkText
+linkText/partialLinkText
 partialLinkText
 CSS selector
 xpath
@@ -959,6 +959,31 @@ findElement(By.parialLinkText("Frameworks"));
 * when id, name, className attributes are present in an element tag but they not unique, then we go to xpath 
 * When id, name, className attributes are not present inside an element's tag, then also we use xpath
 
+
+
+
+
+
+What is WebElement 
+	* It is a interface which follows SearchContext
+	
+click();
+submit();
+sendKeys();
+clear();
+getTagName();
+getDomAttribute();
+getAttribute();
+isSelected();
+isEnabled();
+getText();
+findElement();
+findElements();
+isDisplayed();
+getLocation();
+getSize();
+getRect();
+getCssValue();
 
 
 XPATH - xml path
@@ -1184,6 +1209,11 @@ Concepts covered in Selenium
 * Alert
 * frames
 
+
+SELENIUM BASIC PROGRAM 
+
+1) Why we create WebDriver driver = new ChromeDriver();
+We we are not creating it as ChromeDriver driver = new ChromeDriver();
 
 
 
