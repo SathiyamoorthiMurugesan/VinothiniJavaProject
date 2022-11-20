@@ -455,14 +455,18 @@ String Basics:
 
 * Sequence of character (Basic Explanation)
 * In Java, It is array of character
-* In Java String is a Class
+* In Java, String is a non- premitive data type
+* In Java String is a Class also
 * Why it is class, because we can perform many operations on String
-* if my String is "Sathya", length - 6, index starts with 0. Then last index is 5 or I can say length() -1;
+* if my String is "Sathya", length - 6, index starts with 0. Then last index is 5 or I can say length -1;
 
 How do we define String
 
 String str = "Raj"; - Literals 
 String str1 = new String("Ranjith"); - Instance or object creation
+
+String str = "Sathya";
+String str1 = "* if my String is "Sathya", length - 6, index starts with 0. Then last index is 5 or I can say length -1;"
 
 ****************************************************************************
 
@@ -666,6 +670,8 @@ for each
 break and continue
 
 debug
+
+multiple returns 
 
 ********************************************************************
 
@@ -1214,6 +1220,14 @@ SELENIUM BASIC PROGRAM
 
 1) Why we create WebDriver driver = new ChromeDriver();
 We we are not creating it as ChromeDriver driver = new ChromeDriver();
+
+******************************************************************************************************
+
+DAY 29
+
+window handling practice 
+
+https://www.selenium.dev/documentation/webdriver/interactions/windows/ 
 
 
 
