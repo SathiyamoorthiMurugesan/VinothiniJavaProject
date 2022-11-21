@@ -1,2 +1,2 @@
-User = "Vinothini"
-Password= "123123999"
+User = Vinothini
+Password= 123123999
