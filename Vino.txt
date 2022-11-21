@@ -249,6 +249,12 @@ Git
 We can store our project code in a proper structure. 
 It will help us to reduce time and many people can work on a project at a same time 
 
+1. Create a project in local (our system)
+2. Create git account
+3. Create a repo in your git account (remote)
+4. We view our local project in system through Eclipse
+5. We need to connect our Eclipse with Git repo
+
 upload project in Git
 
 Steps to upload project in Git hub
@@ -327,11 +333,11 @@ public static void thisIsStaticMethod() {
 
 Methods in Java
 
-1) main method 
+1) main method  - NOT needed
 2) static method
 3) non static method
 
-With in a class
+With in a class (static is always one step above - like higher class )
 * calling static method from a static method - directly call
 * calling static method from a non static method - directly call 
 
@@ -449,14 +455,18 @@ String Basics:
 
 * Sequence of character (Basic Explanation)
 * In Java, It is array of character
-* In Java String is a Class
+* In Java, String is a non- premitive data type
+* In Java String is a Class also
 * Why it is class, because we can perform many operations on String
-* if my String is "Sathya", length - 6, index starts with 0. Then last index is 5 or I can say length() -1;
+* if my String is "Sathya", length - 6, index starts with 0. Then last index is 5 or I can say length -1;
 
 How do we define String
 
 String str = "Raj"; - Literals 
 String str1 = new String("Ranjith"); - Instance or object creation
+
+String str = "Sathya";
+String str1 = "* if my String is "Sathya", length - 6, index starts with 0. Then last index is 5 or I can say length -1;"
 
 ****************************************************************************
 
@@ -661,6 +671,8 @@ break and continue
 
 debug
 
+multiple returns 
+
 ********************************************************************
 
 DAY 19
@@ -723,6 +735,8 @@ Two dimention array
 jaggered array
 Arrays class
 
+getter and setter
+
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 * Why String is immutable 
@@ -781,7 +795,482 @@ Map
 ************************************************
 May 25
 
+Map entrySet() 
+
 getter and setter
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Selenium Basics
+
+
+SELENIUM
+
+* Its only for web application automation
+
+BASICs for understanding selenium 
+
+* what are the actions we do on a browser
+
+browser open
+url enter
+new tab open
+tab close 
+min 
+max
+entire browser close
+scroll
+zoom
+navigate - back, forward, refresh
+
+With in application what do we do
+
+application launch - url type
+text enter
+button click
+check box click
+radio box click
+drop down
+links click
+Text read/verify
+Tab title
+Mouse hover
+double click
+Right click
+Date choose
+Drag and drop
+File upload
+Verification/Assert 
+page load speed/time
+Keyboard
+pop up
+	alert
+	tab
+	web alert like info screen
+frames
+wait
+WebTable
+
+
+Who is tester in Automation? ---- WebDriver(Tester)
+
+Each window has an UNIQUE ID (String) --- Window Handle
+
+Session ID also created when we run WebDriver each time.
+
+Whatever element you see on a web page is called WebElement
+
+What is WebElement
+	* DOM (right click on a page and inspect or F12 or Ctrl+Shift + I)
+	* diff types of tags
+		* html
+		* body
+		* header
+		* div
+		* ul
+		* li
+		* a 
+		* select (drop down)
+		* frame or iframe (small html)
+		* table
+			* tr 
+			* th
+			* td
+**********************************************************************************************
+
+Try reading a text from a text file (simple text)
+Try reading a text from a property  file (key value pair -- name = Vino)
+***************************************************************************************
+DAY 26 & 27 & 28
+
+Whatever element you see on a web page is called WebElement
+
+What is DOM?
+
+What is WebElement
+	* DOM (right click on a page and inspect or F12 or Ctrl+Shift + I)
+	* diff types of tags
+		* html
+		* body
+		* header
+		* div
+		* ul
+		* li
+		* a 
+		* select
+		* table
+			* tr 
+			* th
+			* td
+* attributes
+	whatever key value pair we see inside any tag is called attributes
+
+
+How to find element in a page 
+
+<html>
+
+ancestor(div)
+  parent(div)
+	parent(li)
+		child(ul)
+			child(select)
+		child(ul)
+			child(li)
+			child(li)
+	parent(ul)
+	parent(li)
+ancestro(div)
+
+</html>
+
+ancestor
+parent
+child
+siblings
+following ancestor, parent, child, siblings
+preceding ancestor, parent, child, siblings
+text
+contains(text, 'Sathya')
+
+
+
+
+
+
+We find elements in a page using locators 
+
+Locators in selenium - 
+id 
+	* do not use if it has numbers in it. 
+name
+className
+	* with more spaces 
+tagName
+linkText/partialLinkText
+partialLinkText
+CSS selector
+xpath
+
+id, name, className(class) - when these values are unique we can use them directly. When they are not unique, we use either xpath or CSS
+
+findElement(By.id(""));
+findElement(By.name(""));
+findElement(By.class(""));
+findElement(By.linkText("selenium"));
+findElement(By.linkText("Testing Frameworks"));
+findElement(By.linkText("Logging Frameworks"));
+findElement(By.parialLinkText("Frameworks"));
+
+* when id, name, className attributes are present in an element tag but they not unique, then we go to xpath 
+* When id, name, className attributes are not present inside an element's tag, then also we use xpath
+
+
+
+
+
+
+What is WebElement 
+	* It is a interface which follows SearchContext
+	
+click();
+submit();
+sendKeys();
+clear();
+getTagName();
+getDomAttribute();
+getAttribute();
+isSelected();
+isEnabled();
+getText();
+findElement();
+findElements();
+isDisplayed();
+getLocation();
+getSize();
+getRect();
+getCssValue();
+
+
+XPATH - xml path
+
+two types of xpath
+
+absolute xpath - steps 
+	* uses single slash - /html/body/header/div/nav/a[1]
+	/html/body/div/div/div[2]/div/ul/li/div/div[2]/a
+	/html/body/div/div/div[2]/div/ul/li[1]/div/div[2]/a
+	
+relative xpath - lift
+	* uses double slash
+	
+crocs.in
+
+* Basic syntax
+		//tagName[@attribute = 'value']
+		(//span[@class='menuLink-title-J7d'])[1]
+		(//*[@class='menuLink-title-J7d'])[1]
+
+* text
+//tagName[text() = 'value']
+
+* and 
+//span[text() = 'Women' and @class='menuLink-title-J7d']
+
+* or 
+//span[@std ='first' or @class='menuLink-title-J7d'] 
+
+
+//span[contains(text(), 'Classic Crush White Unisex Clog')]
+
+//a[@class = 'item-name-suo']/span[contains(text(), 'Classic Crush White Unisex Clog')]
+
+
+
+When element is not found - we get elementNotFoundException
+
+Why element is not found, because we wrongly identified the element
+1) spelling mistake
+2) flow mistake
+3) xpath wrong
+		
+https://www.guru99.com/xpath-selenium.html#text
+https://www.guru99.com/locators-in-selenium-ide.html
+
+
+
+
+
+
+
+Who is brower? 
+
+Browsers
+* Chrome
+* Firefox
+* MS edge
+* Opera Mini
+* Internet Explorer
+* UC browser
+
+
+
+
+Diff between Chrome browser and Chrome driver 
+
+	We have to use specific driver for specific version of a browser
+	
+chrome - ChromeDriver - we need to download chromeDriver.exe, while running code, we have to let WebDriver about its path.
+Instead of running chrome.exe from our system, we ask webDriver to run ChromeDriver.exe
+For each browser, we need to take compatible verision of its driver.
+for eg: For chrome version 107, we need to download chrome driver version 107.
+Basically we keep the chromeDriver.exe files inside project but we dont push them into git
+
+firefox - geckoDriver
+
+
+Hirarchy 
+* SearchContext Interface (findElement, findElements)
+* WebDriver Interface ( Basic methods for a browser) 
+* RemoteWebDriver Class( all basic methods are implemented here)
+* Classes ChromeDriver, FirefoxDriver, etc..  
+
+SearchContext 
+ 1) WebElement findElement(By by) 
+ 		WebDriver.findElement(By.id(""));
+ 		WebDriver.findElement(By.xpath("//strong[text() =  'ChromeDriver 108.0.5359.22']");
+ 
+ 2) List<WebElement> findElements(By by)
+ 		List<WebElement> allElements = WebDriver.findElements(By.id(""));
+ 		for(WebElement eachElement : allElelments) {
+ 		}
+ 
+WebDriver 
+get()
+  * In this method only we pass application URL
+currentUrl()
+	* It gives currently focused window's URL. So that we can validate against requirement that, URL is correct 
+close()
+ 	* Closes the currently focused window
+quite()
+	* Closes all the window's opened during the session
+getTitle()
+	* Gives the title of the window (tab tile) 
+getWindowHandle()
+	* It gives current window's handle
+	* Its good practice to use getWindowHandle() method, before using getWindowHandles() method
+	* This methods return type is String
+	
+getWindowHandles()
+	* It gives all window's handles opened during that session
+	* This methods return type is Set<String>
+	
+TargetLocator switchTo()
+	WebDriver frame(int index);
+	WebDriver frame(String nameOrId);
+	WebDriver frame(WebElement frameElement);
+	WebDriver parentFrame();
+
+	
+	1) find the frame - means identify the element for the frame
+		- we can identify the frame using 3 things.
+			1. using index
+			2. frameName
+			3. by finding element for the frame
+	2) switchTo().frame()
+	3) do some action on any element inside the frame 
+	4) switchTo().defaultContent();
+	
+	WebDriver window(String nameOrHandle);
+		****WebDriver.switchTo().window();*******
+		
+		String parentWindowHandle = WebDriver.getWindowHandle();
+		Set<String> allWindowHandles = WebDriver.getWindowHandles();
+		for(String eachWindowHandle : allWindowHandles) {
+			if(!eachWindowHandle.equals(parentWindowHandle)) {
+				WebDriver.switchTo().window(eachWindowHandle);
+				}
+			}
+		
+	WebDriver newWindow(WindowType typeHint);
+	WebDriver defaultContent();
+	WebElement activeElement();
+			
+			
+			
+			
+			
+			
+	
+	Alert alert();
+		dismiss();
+		accept();
+		getText();
+		sendKeys();
+	
+What is alert - It distrubts the original flow.
+How to deal with alert - When an alert appears, we need to handle it
+How to confirm a popup is a alert or not - If its alert it will not allow us to acces the original window
+											We can not inspect alert at all.
+1) we expect alert and wrote code, but alert does not appear in the flow. 
+	- NoSuchAlertPresentException
+2) we are not expecting alert but an alert appears 
+	- UnhandledAlertException
+3) We know there is an alert but we did not write code to handle the alert
+	- UnhandledAlertException
+
+There are 3 types are alert 
+	1) informational alert 
+	2) prompt alert - ok/cancel, yes/no
+	3) input alert - We need to enter some input on the alert text box and click on ok
+
+How to deal with alert
+	1) first we need to switch in to the alert 
+		Alert alert = WebDriver.switchTo().alert();
+		alert.accept();
+		alert.dismiss();
+		alert.getText();
+		alert.sendKeys("Input text to alert);
+		
+		WebDriver.switchTo().alert().accept();
+		WebDriver.switchTo().alert().dismiss();
+	
+
+
+
+
+Navigation navigate() - To navigate a page
+
+WebDriver.navigate().back();
+WebDriver.navigate().forward();
+WebDriver.navigate().refresh();
+WebDriver.navigate().to("www.facebook.com");
+
+
+
+
+
+Options manage() - To manage window 
+
+WebDriver.manage().addCookie();
+deleteCookie();
+deleteAllCookies();
+Timeouts timeouts();
+	WebDriver.manage().timeOuts().implicitlyWait();
+
+ Window window();
+ Dimension getSize()
+ 	WebDriver.manage().window().getSize();
+ 	WebDriver.manage().window().setPosition();
+ 	WebDriver.manage().window().minimize();
+ 	WebDriver.manage().window().maximize();
+ 	WebDriver.manage().window().fullscreen();
+ 	
+	
+
+
+Concepts covered in Selenium
+
+* Window Handle
+* Alert
+* frames
+
+
+SELENIUM BASIC PROGRAM 
+
+1) Why we create WebDriver driver = new ChromeDriver();
+We we are not creating it as ChromeDriver driver = new ChromeDriver();
+
+******************************************************************************************************
+
+DAY 29
+
+window handling practice 
+
+https://www.selenium.dev/documentation/webdriver/interactions/windows/ 
+
+Alert - home work
+
+Excel reading using apache and fillo - Home work
+
+*****************************************************************************************************
+
+DAY 30
+
+Drop down in selenium 
+
+
+
+
+Frames 
+
+
+
+
+
+
+
+
+
+
+Wait in Selenium
+
+
+Webtables in Selenium
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
