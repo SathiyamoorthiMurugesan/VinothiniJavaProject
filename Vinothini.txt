@@ -1,0 +1,1326 @@
+***********************************************
+DAY 1 & 2
+
+General things about Java
+
+Project
+	package1
+		InterfaceA
+		ClassA (variables/methods)
+			ClassAA 
+			ClassAB
+		ClassB
+		ClassC
+	package2
+		ClassA
+		ClassB
+	package3
+		ClassX
+		ClassA
+		
+
+* Class - It does a set of work. It consist of variables and methods
+
+* Methods - It does speicific job. It always written insite a class
+
+* Variable - it can have type(Data type) and posses a number or name;
+			variables can have different access - access Modifier
+			
+* Access Modifier - difines where we can use a variable/method/class
+
+* Interface - It contains rules most of the time. Sometimes it does some work too(means method).
+			Interface is always followed by class/classes. 
+			When class follows interface, class should do the rule written in the interface
+
+* package - contains class/classes/interface/interfaces/file/files/folder/folders
+
+* Project - consist of package/packages/file/files/folder/folders/source(src)folder
+
+* static - static means belongs to the class. If govt hospital is class, then hospital receptionist is a static member of that class. We can not seperate them
+			variables and methods can be static
+			within a class - static can be used anywhere directly (in a static method or in non-static method)
+			Outside calss - static can be used but alone with class name. (in a static method or in non-static method)
+
+* Object - E.g: Medical camp; We create Object only for classes; Whenever we create object we copy whatever the class contains(except static)
+			means, only non-static is copied
+			Through object we can not call static things.
+
+* Constructor - Object creation happens with the help of constructor
+				constructor is available in different kind
+				1. without any money/permission
+				2. only with money
+				3. only with permission
+				4. with both money and permission
+				
+###############################################################################################
+				
+Class - important thing, through which we perform some task. Class may contains methods and variables
+
+Method1 - A work
+Method2 - B work
+Method1 + method3 - C work ( A work + continuation)
+
+Variables - shape and count
+shape - datatype 
+
+
+Datatype: Its a clasification of a data, which tells the compiler or interpretor about how the programmer intends to use the data.
+
+1) Primitive
+	a) boolean - yes or no
+	b) Textual 
+		char - a, b, c, A, B
+		byte - 
+			byte x = 10;
+	c) numeric 
+		int 
+		short
+		double
+		long
+		float
+
+2) Non Primitive
+	d) String 
+	e) array
+	
+* default value of String is null
+* default value of int is 0
+
+int a = 10; 
+int a;
+String a = "10";
+double a = 10d;
+char sathya = 'c';
+
+int a; - declare
+a =10; - define/initiate
+
+int a = 10;
+int - data type( primitive --> numeric)
+a - variable/variableName;
+10 - value posses by the variable/ value pointed by the variable
+
+Variables - Its a memory location that can hold values of a specific datatype.
+
+Types of variables 
+1. Local variable - 
+	* defines within a method/constructor   -- {    }
+	* scope of local variable is only within the block in which the variable is declared
+	* intialization of local variable is madatory
+	* local variables can not be static
+	
+	int a = 10;
+	String sathya = "10";
+	
+2. Instance variable/class variable
+	* Declared within a class but outside of a method
+	* Non- static variables
+	* To access instance variables, we need to create object
+	
+	int a = 10;
+	String sathya = "10";
+	
+	
+3. Static variable
+	* Declared within a class but outside fo a method
+	* static keyword is used with variables and methods
+	* To access this variable, dont need to create an object
+	
+	static int a = 10;
+	static String sathya = "10";
+	
+**************************************************************************************
+
+DAY 3
+
+Access Modifier
+	* It defines where and who can use a method/variable/class
+	1) default
+	2) private
+	3) protected
+	4) public 
+	
+	int a = 10; - default (no need to mention "default" word
+	private int a = 10;
+	protected int a = 10;
+	public int a = 10;
+	
+	
+	packageA
+		classA ( public int a = 10)
+			ClassAA (same package and sub class of A)
+		classB (same package but non sub class)
+	packageX
+		classX (diff package non sub class)
+		classXA (diff package but sub class of A
+		
+	
+
+                                     | default |  private  | protected  | public 
+									 |         |           |            | 
+	classA                           | yes     | yes       | yes        | yes
+									 |         |           |            |
+same package but sub class           | yes     | no        | yes        | yes
+									 |         |           |            |
+same package but non sub class       | yes     | no        | yes        | yes
+									 |         |           |            |
+different package but sub class      | no      | no        | yes        | yes
+									 |         |           |            |
+different package but non sub class  | no      | no        | no         | yes
+
+***********************************************************************************************
+DAY 3
+
+JVM, JRE, JDK
+
+our codes - english - .java
+compile - .class - byte code (machine recognizable language)
+
+
+JVM - Java Virtual Machine 
+* This can not be seen
+* it starts the execution
+* It first checks for main method
+* It creates the code flow, in java the flow is called "Thread" 
+* JVM provides run time environment in which Java byte codes can be executed
+* loads code| verifies code| execute code| provides run time environment
+
+JRE - Java Runtime Environment
+* Physically exist
+* Contains JVM and set of libraries
+* JVM uses these libraries to execute the codes
+
+JDK - Java Developement kit
+* It contains JVM, set of libraries and dev tools (JRE + dev tools)
+* Used to develop and execute the codes
+* Dev tools + debugger + compiler + java doc
+
+--------------------------------------
+
+What is eclipse (IDE)
+
+Its an editor to edit and view your project or project files
+While writing itself, it will notify us about complilation errors
+
+Its a user interface to view your project or file in an easy way
+
+tab
+drag and drop
+
+* Perspective 
+	Few of the perspectives in Eclipse
+	* Java
+	* Debug
+	* Git
+	
+* window
+
+
+*****************************************************************************************
+
+DAY 4
+
+Maven
+
+GroupID
+Artifact ID 
+verision
+
+Facebook jar
+Meta 
+facebook
+version 1.1.100
+
+Insta jar
+Meta
+Insta
+version 10.1.10
+
+* Dependency Management tool
+* we dont need to download any jar files(dependency).
+* Group ID, Artifact ID and Version
+* If we create a project with mavan as a dependency management tool, we get a proper project structure.
+* Important file in maven project is pom.xml. In this file, we add dependency details 
+* Dependencies will be stored in .m2 folder
+
+
+Git 
+
+We can store our project code in a proper structure. 
+It will help us to reduce time and many people can work on a project at a same time 
+
+1. Create a project in local (our system)
+2. Create git account
+3. Create a repo in your git account (remote)
+4. We view our local project in system through Eclipse
+5. We need to connect our Eclipse with Git repo
+
+upload project in Git
+
+Steps to upload project in Git hub
+
+1) Create a remote repository
+2) In your system open git bash from your project location
+3) enter below commands
+	git init
+	git add .
+	git commit -m "any message you can type here"
+	git remote add origin SSHURL
+	git push origin master
+	
+	
+	To view status:  git status 
+	to clear lines: clear
+
+****************************************************************
+DAY 5
+
+1. Created a maven project
+2. Put project into git hub
+3. But still its not a proper connection.. There is no git hub icon with the project. 
+4. Also if you open the git perspective, you wont see your project details
+5. In order to make proper connection, delete the project from your laptop (Because we already pushed project in git)
+
+
+Java keywords
+new, class, access modifiers, static, this, super, throw, throws, try, catch, final, finally, data type, 
+
+Naming coversion in java
+* Should not use above things
+* homepage - homePage (Camel case)
+
+If you are creating package, package name
+* should start with small letter followed by camel case
+
+if you are crreating class
+* should start with Captial letter followed by camel case
+
+thisIsPackageName 
+ThisIsClassName
+thisIsMethodName
+ThisIsInterfaceName
+thisIsObjectName or ThisIsObjectName
+thisIsVariableName
+
+
+
+Syntax
+
+class 
+
+accessModifer class className {
+
+}
+
+e.g: public class GovtHospital {
+
+}
+
+
+method 
+
+accessModifer static/Non-static returnType nethodName() {
+
+}
+
+public void thisIsNonStaticMethod() {
+
+}
+
+public static void thisIsStaticMethod() {
+
+}
+
+Methods in Java
+
+1) main method  - NOT needed
+2) static method
+3) non static method
+
+With in a class (static is always one step above - like higher class )
+* calling static method from a static method - directly call
+* calling static method from a non static method - directly call 
+
+* calling non-static from a static method - Object creation
+* calling non-static from a non static - Object creation/ directly call
+
+***************************************************************************************************
+
+DAY 6
+
+Object creation
+
+1) We create object only for class.
+2) In order to access non static members of a class, we create object and access the methods and variables
+
+
+Memory Management
+
+Heap memory
+Stack memory
+SCP (String Constant Pool)
+
+ClassA obj1 = new ClassA();
+
+ClassA - Class Name
+Obj1 - Object Name 
+new = key word to create obj
+ClassA() - Constructor or Object creation or instance creation
+
+* Whenever we create an object for a class, whatever non-static variables and methods present in that class will be copied to heap memory
+* Object varibale or instance variable, is stored in stack memory 
+
+
+	stack memory			HEap me
+	obj1				a = 10; method1();
+	obj2				a = 10; method1();
+	obj3				a = 10; method1(); 
+	obj1ClassB			non static members 
+	
+int a = 10;
+* a = 10 - it will be stored in stack memory
+
+String Sathya = "1000"; String Literals
+String Sathya = new String("1000"); Object creation
+
+Sathya - Stack
+1000 - SCP of Heap memory
+
+String str = "Sathya";
+String str1 = "Sathya";
+String str2 = "Ranjith";
+
+stack 		SCP
+str			"Sathya" - 
+str1 		
+str2 		Ranjith
+
+str1 = str1 + str2;
+str1 = SathyaRanjith
+
+str - Sathya - SathyaRanjith
+
+
+stack 		SCP
+str			"Sathya" - 
+str1 		SathyaRanjith
+str2 		Ranjith
+
+str1 = str1+"abc"
+
+stack 		SCP
+str			"Sathya" - 
+str1 		SathyaRanjithabc
+str2 		Ranjith
+			SathyaRanjith
+			
+String a = "new";
+a = a+"10";
+a = new10;
+
+Immutable concept 
+* It happens with String literals
+
+Variables practice
+	* local variable
+	* class level variable or instance variable
+	* static variable
+	
+Variable as a parameter
+
+*************************************************************
+
+DAY 7
+
+Methods in Java
+1) method without return type
+2) method with return type
+3) static method
+4) non static method
+5) parameterized method
+6) Non parameterized method
+
+
+returned type in java
+	see the example classes created
+
+
+*****************************************************************************
+
+DAY 8
+
+Revisited Return type
+
+String Basics:
+
+* Sequence of character (Basic Explanation)
+* In Java, It is array of character
+* In Java, String is a non- premitive data type
+* In Java String is a Class also
+* Why it is class, because we can perform many operations on String
+* if my String is "Sathya", length - 6, index starts with 0. Then last index is 5 or I can say length -1;
+
+How do we define String
+
+String str = "Raj"; - Literals 
+String str1 = new String("Ranjith"); - Instance or object creation
+
+String str = "Sathya";
+String str1 = "* if my String is "Sathya", length - 6, index starts with 0. Then last index is 5 or I can say length -1;"
+
+****************************************************************************
+
+DAY 9
+
+Interface in Java
+
+
+***************************************************************************
+
+DAY 10
+
+Abstract class in details
+
+
+
+OOPs concept
+
+Object Oriented Program means everything in the program is considered as Object
+
+Java is OOP language but not 100% OOPs language. Primitive date type (int, float, etc.), they are not object. 
+
+Root class of Java is Object. Means, if you create any class, Object class is always extended. But it is implicitly used.
+
+public class ClassA {
+
+} 
+
+this is nothing but 
+
+public class ClassA extends Object {
+
+}
+
+OOPs Concepts in Java
+
+1. Encapsulation
+2. Abstraction
+3. Inheritance
+4. Polymorphism
+
+Try the below things in each of the concepts follows
+VARIABLES
+ACCESS MODIFIERS
+METHODS - parameters or return type
+STATIC
+Obejct creation
+
+***********************************************************************
+
+DAY 11
+
+Inheritance
+
+
+
+*************************************************************************
+
+DAY 12
+
+Object creation with inheritance
+
+ClassName objName = new ClassName(); 
+
+ClassName - reference Class
+objName - Object variable Name
+new - keyword
+ClassName() - Constructor, Object
+
+By using inheritance, we can create 4? types of objects (Only 3 is allowed)
+
+Class1 - parentClass
+class2 - childClass
+
+parentClass obj1 = new parentClass();
+childClass obj2 = new childClass();
+parentClass obj3 = new childClass();
+childClass obj4 = new parentClass(); - not possible
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Polymorphism
+
+One thing available in different format.
+
+* depends on 
+	1) inheritance
+	2) object creation
+	3) method signature (method name and parameters(with or without))
+
+
+Two polymorphism - Overloading, overriding 
+
+OverLoading 
+* It happens within a class 
+* Method name should be same and parameters should vary
+
+Overriding
+* It happens between two classes (Parent and child class) - Inheritance concept
+* Method name should be same and parameter also should be same
+
+*********************************************************************************************
+
+DAY 13
+
+Constructor
+
+Object creation
+
+ClassA obj = new ClassA();
+
+ClassA obj1 = new ClassA();
+ClassA obj2 = new ClassA();
+
+ClassA obj = new ClassA();
+ClassA obj = new ClassA(20);
+ClassA obj = new ClassA("Text");
+
+public void method() { }
+
+obj.method();
+obj.method(10);
+
+public ClassA() {
+
+}
+
+*****************************************************************
+DAY 14
+
+Constructor continuation
+
+
+***************************************************************************************
+
+DAY 15
+
+Keywords in Java
+
+access modifiers
+data types
+class, interface, package, abstract
+return types, return
+extends, implements
+new
+
+
+final
+static
+super
+this
+
+static
+ * always belongs to the class
+ * object creation not needed
+ * static members within a class - direct calling
+ * static members outside a class - className.staticMemberName
+ * we can overload static method
+ * we can not override static method
+ * In interface, we can create a methods with body but that method should be either static or default
+ 
+ 
+Final
+ * we have to initiate while declaring
+ * Once value its initalized, we cant change the value at any point
+ * we can use final with variables, methods and class
+
+
+*************************************************************
+
+DAY 16
+
+Super and this keywords
+
+super() and this() 
+
+*********************************************************************
+
+DAY 17
+
+Errors and Exceptions 
+
+try catch finally
+
+
+#######################
+
+Throw Throws Throwable
+
+*****************************************************************
+
+DAY 18
+
+if 
+
+for
+
+for each
+
+break and continue
+
+debug
+
+multiple returns 
+
+********************************************************************
+
+DAY 19
+
+switch 
+
+Scanner
+
+getter and setter 
+
+Thread
+
+*************************************************************************
+
+
+Different ways to provide inputs
+
+1. hard code input value
+2. file reading (text file, prop file, excel, pdf)
+3. Directly get the value from the application itself then use it as a input
+4. Take input from DB.. RDBMS, DBMS
+
+
+##########################################
+
+Arrays
+
+int a = 1;
+int b = 2;
+int c = 10;
+
+same kind of data type 
+size fixed
+
+
+int array1[] = new int[5];
+int[] array2 = new int[5];
+int array3[] = {1, 2, 3, 4, 5};
+int[] array4 = {1, 2, 3, 4, 5};
+int[] array5 = new int[] {11, 22, 33};
+array5[index];
+
+Array practice using methods
+
+String practice 
+
+String str = "";
+String str1 = "        ";
+String str2 = "Sathya";
+
+str2[0] = 'S';
+.
+.
+.
+str2[5] = 'a';
+
+str2.charAt(3) = 'h';
+
+Two dimention array
+jaggered array
+Arrays class
+
+getter and setter
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+* Why String is immutable 
+* try String methods 
+* String array practice
+
+*********************************************************************
+DAY 20
+Two dimention array
+jaggered array
+Arrays class
+debug mode
+
+*********************************************************************
+
+DAY 21
+Threads in Java
+String buffer 
+String builder
+
+https://www.java67.com/2018/04/21-string-programming-and-coding-interview-questions-answers.html
+
+try with one word string
+1) reverse a string 
+2) In a string, remove the duplicate letters
+3) In a string, get count of each letter 
+4) In a string find the letter which occured max times
+
+
+try with a sentence 
+1) Count no of words in the sentence
+2) Remove duplicate words in a sentence
+3) Count each words 
+4) Find the word which occurs multiple time
+5) Find the word which occured most
+
+mostly we use the below concepts
+array, string methods, for, if and temp variable
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+Wrapper class in Java
+
+****************************************************************
+
+DAY 22 & 23
+
+COllections 
+
+********************************************************************
+
+DAY 24
+
+Map
+
+************************************************
+May 25
+
+Map entrySet() 
+
+getter and setter
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+Selenium Basics
+
+
+SELENIUM
+
+* Its only for web application automation
+
+BASICs for understanding selenium 
+
+* what are the actions we do on a browser
+
+browser open
+url enter
+new tab open
+tab close 
+min 
+max
+entire browser close
+scroll
+zoom
+navigate - back, forward, refresh
+
+With in application what do we do
+
+application launch - url type
+text enter
+button click
+check box click
+radio box click
+drop down
+links click
+Text read/verify
+Tab title
+Mouse hover
+double click
+Right click
+Date choose
+Drag and drop
+File upload
+Verification/Assert 
+page load speed/time
+Keyboard
+pop up
+	alert
+	tab
+	web alert like info screen
+frames
+wait
+WebTable
+
+
+Who is tester in Automation? ---- WebDriver(Tester)
+
+Each window has an UNIQUE ID (String) --- Window Handle
+
+Session ID also created when we run WebDriver each time.
+
+Whatever element you see on a web page is called WebElement
+
+What is WebElement
+	* DOM (right click on a page and inspect or F12 or Ctrl+Shift + I)
+	* diff types of tags
+		* html
+		* body
+		* header
+		* div
+		* ul
+		* li
+		* a 
+		* select (drop down)
+		* frame or iframe (small html)
+		* table
+			* tr 
+			* th
+			* td
+**********************************************************************************************
+
+Try reading a text from a text file (simple text)
+Try reading a text from a property  file (key value pair -- name = Vino)
+***************************************************************************************
+DAY 26 & 27 & 28
+
+Whatever element you see on a web page is called WebElement
+
+What is DOM?
+
+What is WebElement
+	* DOM (right click on a page and inspect or F12 or Ctrl+Shift + I)
+	* diff types of tags
+		* html
+		* body
+		* header
+		* div
+		* ul
+		* li
+		* a 
+		* select
+		* table
+			* tr 
+			* th
+			* td
+* attributes
+	whatever key value pair we see inside any tag is called attributes
+
+
+How to find element in a page 
+
+<html>
+
+ancestor(div)
+  parent(div)
+	parent(li)
+		child(ul)
+			child(select)
+		child(ul)
+			child(li)
+			child(li)
+	parent(ul)
+	parent(li)
+ancestro(div)
+
+</html>
+
+ancestor
+parent
+child
+siblings
+following ancestor, parent, child, siblings
+preceding ancestor, parent, child, siblings
+text
+contains(text, 'Sathya')
+
+
+
+
+
+
+We find elements in a page using locators 
+
+Locators in selenium - 
+id 
+	* do not use if it has numbers in it. 
+name
+className
+	* with more spaces 
+tagName
+linkText/partialLinkText
+partialLinkText
+CSS selector
+xpath
+
+id, name, className(class) - when these values are unique we can use them directly. When they are not unique, we use either xpath or CSS
+
+findElement(By.id(""));
+findElement(By.name(""));
+findElement(By.class(""));
+findElement(By.linkText("selenium"));
+findElement(By.linkText("Testing Frameworks"));
+findElement(By.linkText("Logging Frameworks"));
+findElement(By.parialLinkText("Frameworks"));
+
+* when id, name, className attributes are present in an element tag but they not unique, then we go to xpath 
+* When id, name, className attributes are not present inside an element's tag, then also we use xpath
+
+
+
+
+
+
+What is WebElement 
+	* It is a interface which follows SearchContext
+	
+click();
+submit();
+sendKeys();
+clear();
+getTagName();
+getDomAttribute();
+getAttribute();
+isSelected();
+isEnabled();
+getText();
+findElement();
+findElements();
+isDisplayed();
+getLocation();
+getSize();
+getRect();
+getCssValue();
+
+
+XPATH - xml path
+
+two types of xpath
+
+absolute xpath - steps 
+	* uses single slash - /html/body/header/div/nav/a[1]
+	/html/body/div/div/div[2]/div/ul/li/div/div[2]/a
+	/html/body/div/div/div[2]/div/ul/li[1]/div/div[2]/a
+	
+relative xpath - lift
+	* uses double slash
+	
+crocs.in
+
+* Basic syntax
+		//tagName[@attribute = 'value']
+		(//span[@class='menuLink-title-J7d'])[1]
+		(//*[@class='menuLink-title-J7d'])[1]
+
+* text
+//tagName[text() = 'value']
+
+* and 
+//span[text() = 'Women' and @class='menuLink-title-J7d']
+
+* or 
+//span[@std ='first' or @class='menuLink-title-J7d'] 
+
+
+//span[contains(text(), 'Classic Crush White Unisex Clog')]
+
+//a[@class = 'item-name-suo']/span[contains(text(), 'Classic Crush White Unisex Clog')]
+
+
+
+When element is not found - we get elementNotFoundException
+
+Why element is not found, because we wrongly identified the element
+1) spelling mistake
+2) flow mistake
+3) xpath wrong
+		
+https://www.guru99.com/xpath-selenium.html#text
+https://www.guru99.com/locators-in-selenium-ide.html
+
+
+
+
+
+
+
+Who is brower? 
+
+Browsers
+* Chrome
+* Firefox
+* MS edge
+* Opera Mini
+* Internet Explorer
+* UC browser
+
+
+
+
+Diff between Chrome browser and Chrome driver 
+
+	We have to use specific driver for specific version of a browser
+	
+chrome - ChromeDriver - we need to download chromeDriver.exe, while running code, we have to let WebDriver about its path.
+Instead of running chrome.exe from our system, we ask webDriver to run ChromeDriver.exe
+For each browser, we need to take compatible verision of its driver.
+for eg: For chrome version 107, we need to download chrome driver version 107.
+Basically we keep the chromeDriver.exe files inside project but we dont push them into git
+
+firefox - geckoDriver
+
+
+Hirarchy 
+* SearchContext Interface (findElement, findElements)
+* WebDriver Interface ( Basic methods for a browser) 
+* RemoteWebDriver Class( all basic methods are implemented here)
+* Classes ChromeDriver, FirefoxDriver, etc..  
+
+SearchContext 
+ 1) WebElement findElement(By by) 
+ 		WebDriver.findElement(By.id(""));
+ 		WebDriver.findElement(By.xpath("//strong[text() =  'ChromeDriver 108.0.5359.22']");
+ 
+ 2) List<WebElement> findElements(By by)
+ 		List<WebElement> allElements = WebDriver.findElements(By.id(""));
+ 		for(WebElement eachElement : allElelments) {
+ 		}
+ 
+WebDriver 
+get()
+  * In this method only we pass application URL
+currentUrl()
+	* It gives currently focused window's URL. So that we can validate against requirement that, URL is correct 
+close()
+ 	* Closes the currently focused window
+quite()
+	* Closes all the window's opened during the session
+getTitle()
+	* Gives the title of the window (tab tile) 
+getWindowHandle()
+	* It gives current window's handle
+	* Its good practice to use getWindowHandle() method, before using getWindowHandles() method
+	* This methods return type is String
+	
+getWindowHandles()
+	* It gives all window's handles opened during that session
+	* This methods return type is Set<String>
+	
+TargetLocator switchTo()
+	WebDriver frame(int index);
+	WebDriver frame(String nameOrId);
+	WebDriver frame(WebElement frameElement);
+	WebDriver parentFrame();
+
+	
+	1) find the frame - means identify the element for the frame
+		- we can identify the frame using 3 things.
+			1. using index
+			2. frameName
+			3. by finding element for the frame
+	2) switchTo().frame()
+	3) do some action on any element inside the frame 
+	4) switchTo().defaultContent();
+	
+	WebDriver window(String nameOrHandle);
+		****WebDriver.switchTo().window();*******
+		
+		String parentWindowHandle = WebDriver.getWindowHandle();
+		Set<String> allWindowHandles = WebDriver.getWindowHandles();
+		for(String eachWindowHandle : allWindowHandles) {
+			if(!eachWindowHandle.equals(parentWindowHandle)) {
+				WebDriver.switchTo().window(eachWindowHandle);
+				}
+			}
+		
+	WebDriver newWindow(WindowType typeHint);
+	WebDriver defaultContent();
+	WebElement activeElement();
+			
+			
+			
+			
+			
+			
+	
+	Alert alert();
+		dismiss();
+		accept();
+		getText();
+		sendKeys();
+	
+What is alert - It distrubts the original flow.
+How to deal with alert - When an alert appears, we need to handle it
+How to confirm a popup is a alert or not - If its alert it will not allow us to acces the original window
+											We can not inspect alert at all.
+1) we expect alert and wrote code, but alert does not appear in the flow. 
+	- NoSuchAlertPresentException
+2) we are not expecting alert but an alert appears 
+	- UnhandledAlertException
+3) We know there is an alert but we did not write code to handle the alert
+	- UnhandledAlertException
+
+There are 3 types are alert 
+	1) informational alert 
+	2) prompt alert - ok/cancel, yes/no
+	3) input alert - We need to enter some input on the alert text box and click on ok
+
+How to deal with alert
+	1) first we need to switch in to the alert 
+		Alert alert = WebDriver.switchTo().alert();
+		alert.accept();
+		alert.dismiss();
+		alert.getText();
+		alert.sendKeys("Input text to alert);
+		
+		WebDriver.switchTo().alert().accept();
+		WebDriver.switchTo().alert().dismiss();
+	
+
+
+
+
+Navigation navigate() - To navigate a page
+
+WebDriver.navigate().back();
+WebDriver.navigate().forward();
+WebDriver.navigate().refresh();
+WebDriver.navigate().to("www.facebook.com");
+
+
+
+
+
+Options manage() - To manage window 
+
+WebDriver.manage().addCookie();
+deleteCookie();
+deleteAllCookies();
+Timeouts timeouts();
+	WebDriver.manage().timeOuts().implicitlyWait();
+
+ Window window();
+ Dimension getSize()
+ 	WebDriver.manage().window().getSize();
+ 	WebDriver.manage().window().setPosition();
+ 	WebDriver.manage().window().minimize();
+ 	WebDriver.manage().window().maximize();
+ 	WebDriver.manage().window().fullscreen();
+ 	
+	
+
+
+Concepts covered in Selenium
+
+* Window Handle
+* Alert
+* frames
+
+
+SELENIUM BASIC PROGRAM 
+
+1) Why we create WebDriver driver = new ChromeDriver();
+We we are not creating it as ChromeDriver driver = new ChromeDriver();
+
+******************************************************************************************************
+
+DAY 29
+
+window handling practice 
+
+https://www.selenium.dev/documentation/webdriver/interactions/windows/ 
+
+Alert - home work
+
+Excel reading using apache and fillo - Home work
+
+*****************************************************************************************************
+
+DAY 30
+
+Drop down in selenium 
+
+
+
+
+Frames 
+
+
+
+
+
+
+
+
+
+
+Wait in Selenium
+
+
+Webtables in Selenium
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
