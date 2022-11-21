@@ -1237,22 +1237,23 @@ Excel reading using apache and fillo - Home work
 
 DAY 30
 
-Drop down in selenium 
+What are the dynamic methods we create
 
+1) make Selenium methods as dynamic and keep it in a class
+2) Common methods (prop read, excel read, file read) 
+3) application related common methods
 
-
+Drop down in selenium
+ 
 
 Frames 
 
-
-
-
-
-
-
-
-
-
+I want to click and element inside frame
+	1. find the frame (name, index or xpath) which has the element we want to click
+	2. switch to the frame 
+	3. click the element
+	4. come out of frame
+	
 Wait in Selenium
 
 
