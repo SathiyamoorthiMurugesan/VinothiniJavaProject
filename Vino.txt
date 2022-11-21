@@ -1229,6 +1229,40 @@ window handling practice
 
 https://www.selenium.dev/documentation/webdriver/interactions/windows/ 
 
+Alert - home work
+
+Excel reading using apache and fillo - Home work
+
+*****************************************************************************************************
+
+DAY 30
+
+Drop down in selenium 
+
+
+
+
+Frames 
+
+
+
+
+
+
+
+
+
+
+Wait in Selenium
+
+
+WebTables in Selenium
+
+
+Converting selenium methods into dynamic methods
+
+
+
 
 
 
