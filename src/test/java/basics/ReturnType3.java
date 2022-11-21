@@ -6,15 +6,8 @@ public class ReturnType3 {
 
 	public static void main(String[] args) {
 		ReturnType3 obj = new ReturnType3();
-//		returnedValue = obj.buySoap();
-//		returnedValue = 50;
 		obj.method1();
-		
-		obj.method3(100);
-		System.out.println("*******"+returnedValue);
-		
-		obj.method4();
-		System.out.println("&&&&&&&&&"+returnedValue);
+		obj.getLocalVariableThroughMethod();
 	}
 	
 	public int buySoap() {
@@ -25,38 +18,25 @@ public class ReturnType3 {
 	public void method1() {
 		System.out.println(buySoap());
 		System.out.println(returnedValue);
+		System.out.println("returnedValue");
 	}
 	
-	public void method2() {
-		int amount = buySoap();
+	public void getLocalVariableThroughMethod() {
+		int amount = 100 - buySoap();
+//		int amount = 100 - 50;
 		System.out.println(amount);
-	}
-	
-	public int method3(int value) {
-//		int x = value - returnedValue;
-//		return x;
-		return returnedValue - value;
-	}
-	
-	public int method4() {
-		returnedValue = returnedValue - 50;
-		return returnedValue;
 		
+		System.out.println(var);
+		giveLocalVariableValueThroughClassVariable();
+		System.out.println(var);
 	}
 	
-	int amount;
-	public void methodWithClassVariableReturnType() {
-		System.out.println(amount);//0
-		amount = buySoap();
-		System.out.println(amount);//50
-	}
+	int var;
 	
-	public void changeClassVariableValue() {
-		System.out.println(amount); //50
-		amount = 51;
-		System.out.println(amount);
+	public void giveLocalVariableValueThroughClassVariable() {
+		int b = 50;
+		var = b;
 	}
-	
 	
 
 }
