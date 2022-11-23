@@ -1,10 +1,13 @@
 package seleniumBasics;
 
+import org.openqa.selenium.support.ui.Wait;
+
 public class WaitImplement {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		Wait wait = new Wait();
 	}
 
+	
+	
 }
