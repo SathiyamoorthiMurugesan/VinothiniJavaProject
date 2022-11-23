@@ -13,7 +13,7 @@ public class DropDownPractice {
 
 	public static void main(String[] args) throws Exception {
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\LENOVO\\git\\VinothiniJavaProject\\drivers\\chromedriver_107.exe");
+				"C:/Users/prabu/git/VinothiniJavaProject/src/test/resources/drivers/chromedriver_107.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.hyrtutorials.com/p/html-dropdown-elements-practice.html");
@@ -25,26 +25,26 @@ public class DropDownPractice {
 
 		courseDropDown.click();
 
-		Thread.sleep(3000);
-
-		Select select = new Select(courseDropDown);
-
-		System.out.println(select.isMultiple());
-
-		select.selectByIndex(3);
-
-		Thread.sleep(3000);
-
-		select.selectByValue("net");
-
-		Thread.sleep(3000);
-
-		select.selectByVisibleText("Java");
-
-		List<WebElement> courseAllOptions = select.getOptions();
-		for (WebElement each : courseAllOptions) {
-			System.out.println(each.getText());
-		}
+//		Thread.sleep(3000);
+//
+//		Select select = new Select(courseDropDown);
+//
+//		System.out.println(select.isMultiple());
+//
+//		select.selectByIndex(3);
+//
+//		Thread.sleep(3000);
+//
+//		select.selectByValue("net");
+//
+//		Thread.sleep(3000);
+//
+//		select.selectByVisibleText("Java");
+//
+//		List<WebElement> courseAllOptions = select.getOptions();
+//		for (WebElement each : courseAllOptions) {
+//			System.out.println(each.getText());
+//		}
 
 	}
 

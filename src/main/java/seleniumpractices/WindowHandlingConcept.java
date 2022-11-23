@@ -13,10 +13,12 @@ import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
 
 public class WindowHandlingConcept {
 
+	static WebDriver driver;
+
 	public static void main(String[] args) throws Exception {
 		System.setProperty("webdriver.chrome.driver",
 				"C:/Users/prabu/git/VinothiniJavaProject/src/test/resources/drivers/chromedriver_107.exe");
-		WebDriver driver = new ChromeDriver();
+		driver = new ChromeDriver();
 		driver.get("https://www.selenium.dev/");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));// wait time for browser
 		driver.manage().window().maximize();
@@ -25,7 +27,7 @@ public class WindowHandlingConcept {
 		JavascriptExecutor je1 = (JavascriptExecutor) driver;
 		je1.executeScript("arguments[0].scrollIntoView(true);", windowTile);
 		driver.findElement(By.xpath("//h5[text() = 'Alerts, Frame & Windows']")).click();
-		driver.findElement(By.xpath("//span[text() = 'Browser Windows']")).click(); /*Browser Click*/
+		driver.findElement(By.xpath("//span[text() = 'Browser Windows']")).click(); /* Browser Click */
 		String parentWindow = driver.getWindowHandle();
 		driver.findElement(By.id("tabButton")).click();
 //		Thread.sleep(2000);
@@ -33,17 +35,51 @@ public class WindowHandlingConcept {
 //		Thread.sleep(2000);
 //		driver.findElement(By.xpath("//button[@id='messageWindowButton']")).click();
 
-		//switch window using page title
-		
-		Set<String> switchWindow= driver.getWindowHandles();
-		for(String each:switchWindow)
-		{
-			if(!each.equals(parentWindow))
-			{
+		// switch window using page title
+
+		Set<String> switchWindow = driver.getWindowHandles();
+		for (String each : switchWindow) {
+			if (!each.equals(parentWindow)) {
 				System.out.println(driver.switchTo().window(each).getTitle());
 			}
 		}
-		
+
+	}
+
+	public void switchToChildWindow(String windowHandle) {
+		Set<String> switchWindow = driver.getWindowHandles();
+		for (String each : switchWindow) {
+			if (!each.equals(windowHandle)) {
+				driver.switchTo().window(each).getTitle();
+			}
+		}
+	}
+
+	public void switchToLastWindow() {
+		Set<String> switchWindow = driver.getWindowHandles();
+		for (String each : switchWindow) {
+			driver.switchTo().window(each).getTitle();
+		}
+	}
+
+	public void closeAllOtherWindows(String windowHandle) {
+		Set<String> switchWindow = driver.getWindowHandles();
+		for (String each : switchWindow) {
+			if (!each.equals(windowHandle)) {
+				driver.close();
+			}
+		}
+		driver.switchTo().window(windowHandle);
+	}
+	
+	public void closeAllOtherWindowBasedOnTitle(String titleOfWindow) {
+		Set<String> switchWindow = driver.getWindowHandles();
+		for (String each : switchWindow) {
+			if(!driver.switchTo().window(each).getTitle().equalsIgnoreCase(titleOfWindow)) {
+				driver.close();
+			}
+		}
+		driver.switchTo().window("ParentWindowHandle");
 	}
 
 }
