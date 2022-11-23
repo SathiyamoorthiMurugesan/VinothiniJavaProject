@@ -1,4 +1,4 @@
-package seleniumBasics;
+package seleniumpractices;
 
 import org.openqa.selenium.support.ui.Wait;
 

@@ -1256,8 +1256,20 @@ I want to click and element inside frame
 	
 Wait in Selenium
 
+There are two types...
+	1.ImplicitlyWait
+		* written only once when opening the application.
+		* This one line wait for page to load
+		* This one line is also applicable for all the pages you open in that session.
+	2. Explicit wait
+	3. Fluent wait
+	
+https://www.selenium.dev/documentation/webdriver/waits/
+		
+
 
 Webtables in Selenium
+
 
 
 
