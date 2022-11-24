@@ -1292,6 +1292,17 @@ Actions class in selenium
 * So whenever we use actions, we need to build(combine) and perform();
 	
 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Robot class 
+
+https://www.softwaretestinghelp.com/file-upload-in-selenium/
+https://testguild.com/selenium-how-to-handle-windows-based-dialogs-and-pop-ups/
+
+* It is used to automate Mouse and Keyboards 
+* along with this, to automate window based pop ups, we use robot class 
+
 
 
 
