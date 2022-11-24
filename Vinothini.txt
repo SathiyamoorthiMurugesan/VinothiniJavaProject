@@ -1265,10 +1265,33 @@ There are two types...
 	3. Fluent wait
 	
 https://www.selenium.dev/documentation/webdriver/waits/
-		
 
+*********************************************************************************
+DAY 31
 
 Webtables in Selenium
+
+
+**********************************************************************************
+
+DAY 32 
+
+Actions class in selenium
+
+* This class is used to automate mouse and keyboard actions 
+* Mouse actions
+	* left click
+	* right click (context click)
+	* double click
+	* drag and drop
+	* move mouse to hover on an element (mouse hover)
+	* scroll
+	* Keyboard actions
+	
+* In actions, we combine many actions. 
+* So whenever we use actions, we need to build(combine) and perform();
+	
+
 
 
 
