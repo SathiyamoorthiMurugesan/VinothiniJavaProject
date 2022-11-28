@@ -21,7 +21,6 @@ public class CovertingToMethods {
 		obj.facebookLogin();
 	}
 	
-	
 	public void facebookLogin() throws Exception {
 		browserLaunch();
 		maximizeBrowserWindow();
@@ -60,20 +59,15 @@ public class CovertingToMethods {
 		driver.get(url);
 	}
 	
-	
 	public void launchApplicationUsingProp() throws Exception {
 //		driver.get("facebook.com");
 		driver.get(commonMethods.readAndReturnProperty("facebookURL"));
-		
 	}
-	
 	
 	public void loginFacebook1(String userName, String pass) {
 		driver.findElement(By.id("email")).sendKeys(userName);
 		driver.findElement(By.id("pass")).sendKeys(pass);
 		driver.findElement(By.name("login")).click();
 	}
-	
-	
-
 }
+
