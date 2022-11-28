@@ -1355,7 +1355,17 @@ DAY 34
 
 Framework in Selenium
 
-Difference between Automation and Framework? 
+Difference between Automation and Framework?
+* Doing a work without manual effort is called - Automation
+* Doing a same work by using a properly arranged structure of code.
+	E.g: keep a separate class to read or write on excel, prop or config or text files
+
+Page Object Model structure... 
+	* each page - each java class
+	* each class - find all the elements inside of it and store it in a variable with proper name. (Page Objects)
+	* each class - find all the possible test cases and covert them into methods
+
+
 
 
 Test Driven
@@ -1374,6 +1384,18 @@ TestNG
 https://www.browserstack.com/guide/testng-framework-with-selenium-automation#:~:text=TestNG%20is%20an%20open%2Dsource,stands%20for%20'Next%20Generation'.
 
 https://www.irctc.co.in/nget/train-search
+
+
+
+
+
+
+
+
+
+
+
+****************************************************************************************************
 
 Agile
 
