@@ -37,6 +37,8 @@ public class CovertingToMethods {
 //		loginFacebook1("sathya08ece@gmail.com", "TestSathya@123");
 	}
 	
+	
+	
 	public void test1() {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\LENOVO\\git\\VinothiniJavaProject\\drivers\\chromedriver_107.exe");
 		WebDriver driver = new ChromeDriver();
@@ -54,6 +56,11 @@ public class CovertingToMethods {
 	
 	public void maximizeBrowserWindow() {
 		driver.manage().window().maximize();
+	}
+	
+	public void launchBrowserAndMaximizeWindow() {
+		browserLaunch();
+		maximizeBrowserWindow();
 	}
 	
 	public void launchApplication(String url) {
