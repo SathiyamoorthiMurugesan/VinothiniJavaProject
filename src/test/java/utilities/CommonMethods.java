@@ -13,3 +13,12 @@ public class CommonMethods {
 		return p.getProperty(propName);
 	}
 }
+
+
+
+
+
+
+
+
+

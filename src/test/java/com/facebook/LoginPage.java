@@ -78,8 +78,7 @@ public class LoginPage {
 	
 	
 	
-	
-	
+
 	public void loginFacebook(String userID, String password) {
 		userId.sendKeys(userID);
 		pass.sendKeys(password);
@@ -93,6 +92,7 @@ public class LoginPage {
 		createNewAccount_NewPassword.sendKeys(password);
 //		DOB = 20102020;
 //		DOB = 20/10/2020;
+	
 		
 		
 		

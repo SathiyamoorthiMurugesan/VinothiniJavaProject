@@ -20,7 +20,27 @@ public class ReverseArray {
 			System.out.print(a[j]);
 			System.out.print(" ");
 				}
+		System.out.println();
+		System.out.println("******************************************************");
+		System.out.println("********String reverse - Vino******** using character array");
+		
+		String name= "Vino";
+		
+		int len=name.length();
+		System.out.println("Length of Array: "+len);
+		char[] name1= name.toCharArray();
+		System.out.println("Length of Array2:" + name1.length);
+		String rev="";
+				
+		for(int i=len-1;i>=0;i--)
+		{
+			rev=rev+name1[i];
+		}
+		System.out.println("reverse of string: "+rev);
 		
 	}
+	
+	
+	
 
 }
