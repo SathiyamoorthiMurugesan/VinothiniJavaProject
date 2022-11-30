@@ -1351,7 +1351,7 @@ Our project have both Client team persons as well as Capgemini team persons
 	
 ****************************************************************************************************
 	
-DAY 34 
+DAY 34 & 35
 
 Framework in Selenium
 
@@ -1363,7 +1363,7 @@ Difference between Automation and Framework?
 Page Object Model design pattern... 
 	* each page - each java class
 	* each class - find all the elements inside of it and store it in a variable with proper name. (Page Objects)
-	* each class - find all the possible test cases and covert them into methods
+	* each class - find all the possible test cases and covert them into methods (Page Objects)
 
 
 Test Driven
@@ -1384,6 +1384,15 @@ TestNG
 * To work with TestNG in Eclipse, you need to install TestNG Eclipse plugin via market place 
 * In order to use TestNG annotations and tags in your project, you need to add TestNG dependencies 
 
+Official Documentation page: https://testng.org/doc/documentation-main.html
+
+PageFactory: https://www.seleniumeasy.com/selenium-tutorials/page-factory-pattern-in-selenium-webdriver
+
+Difference between page factory and page objects
+https://www.softwaretestingmaterial.com/page-object-model/#:~:text=What%20is%20the%20difference%20between%20Page%20Object%20Model%20(POM)%20and,create%20an%20instance%20of%20it.
+
+
+
 TestNG Annotations
 
 STATE CM - ST CM
@@ -1399,6 +1408,35 @@ Order of annotation
 @AfterClass
 @AfterTest
 @AfterSuite
+
+priority = 1
+enabled = true/false
+always run = true/false
+invocation count = 3
+
+Parameters
+DataProviders
+DependsOnMethods
+Groups
+DependsOnGroups
+Failed test cases (run using testng-failed.xml or retryAnalyser)
+
+TestNG as framework
+
+1) Common and resuable methods - Class
+2) each pages - class
+3) Test cases
+	NewHire Testcase.java
+		testcase1 method (new hire ppt can login into upoint)
+			login page's login method
+			home page's user name validation
+		testcase2 method
+		testcase3 method
+	AE Testcase.java
+		AEtestcase1 method
+		
+	
+
 
 
 @Test - Method/Test case
