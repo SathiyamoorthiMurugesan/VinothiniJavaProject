@@ -8,6 +8,7 @@ public class DateClass {
 
 		
 		dateStringSplitintoDateMonthYear("20302022");
+		dateclac("20302022");
 	}
 	
 	public static void dateStringSplitintoDateMonthYear(String dob)
@@ -23,6 +24,19 @@ public class DateClass {
 	DateTimeFormatter.ofPattern(year);
 	
 	
+
+	
 }
+	public static void dateclac(String dob)
+	{
+	
+		 String date = dob.substring(0,2)+"-"+dob.substring(2,4)+"-"+dob.substring(4,8);
+		 System.out.println(date);
+		
+	}
+	
+
+	
+	
 
 }
