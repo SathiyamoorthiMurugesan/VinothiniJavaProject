@@ -9,6 +9,7 @@ import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -17,7 +18,6 @@ public class RobotClass {
 
 	static WebDriver driver;
 
-	@SuppressWarnings("deprecation")
 	public static void main(String[] args) throws AWTException, InterruptedException {
 		System.out.println(System.getProperty("user.dir"));
 //		System.setProperty("webdriver.chrome.driver",
@@ -25,10 +25,10 @@ public class RobotClass {
 //		System.setProperty("webdriver.chrome.driver",
 //				System.getProperty("user.dir")+"\\drivers\\chromedriver_107.exe");
 		System.setProperty("webdriver.chrome.driver",
-				".\\drivers\\chromedriver_107.exe");
+				"C:\\Users\\prabu\\git\\VinothiniJavaProject\\src\\test\\resources\\drivers\\chromedriver_107.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("file:///C:/Users/LENOVO/Desktop/uploadAFile.html");
+		driver.get("file:///D:/Learnings/File.html");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
 //		driver.findElement(By.id("fileToUpload")).sendKeys("D:\\sathiya\\Text123.txt");
@@ -44,27 +44,30 @@ public class RobotClass {
 //		Thread.sleep(5000);
 //		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
 //		wait.withTimeout(Duration.ofSeconds(3));
-		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+//		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		
 		Robot robo = new Robot();
 
-		StringSelection stringSelection = new StringSelection("D:\\sathiya\\Text123.txt");
+		StringSelection stringSelection = new StringSelection("D:\\Learnings\\Vino.txt");
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
 		
 		robo.keyPress(KeyEvent.VK_CONTROL);
 		robo.keyPress(KeyEvent.VK_V);
-		robo.keyRelease(KeyEvent.VK_V);
 		robo.keyRelease(KeyEvent.VK_CONTROL);
+		
+		robo.keyRelease(KeyEvent.VK_V);
+		
 		
 		Thread.sleep(3000);
 		
-		robo.keyPress(KeyEvent.VK_ENTER);
-		robo.keyRelease(KeyEvent.VK_ENTER);
-		
-		
-		
 		
 
+
+		robo.keyPress(KeyEvent.VK_ENTER);
+		robo.keyRelease(KeyEvent.VK_ENTER);
+
+		
+		WebDriverWait
 	}
 
 }

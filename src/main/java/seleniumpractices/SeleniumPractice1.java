@@ -51,18 +51,18 @@ public class SeleniumPractice1 {
 		driver.findElement(By.xpath("//button[text()='Submit']")).click();
 	//	System.out.println(driver.findElement(By.xpath("//div[@id='output']/div/p[1]")).getText());
 		
-		List<WebElement> allDetails = driver.findElements(By.xpath("//div[@id='output']/div/p"));
-		for(WebElement each: allDetails) {
-			System.out.println(each.getText());
-		}
+//		List<WebElement> allDetails = driver.findElements(By.xpath("//div[@id='output']/div/p"));
+//		for(WebElement each: allDetails) {
+//			System.out.println(each.getText());
+//		}
 		
 		WebElement fullAddress1 = driver.findElement(By.id("output"));
 		System.out.println(fullAddress1.findElement(By.tagName("p")).getText());
 		
-		List<WebElement> fullDetails2 = fullAddress1.findElements(By.tagName("p"));
-		for(WebElement each: fullDetails2) {
-			System.out.println(each.getText());
-		}
+//		List<WebElement> fullDetails2 = fullAddress1.findElements(By.tagName("p"));
+//		for(WebElement each: fullDetails2) {
+//			System.out.println(each.getText());
+//		}
 		
 // 		driver.close();
 		

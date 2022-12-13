@@ -24,7 +24,7 @@ public class WaitInSelenium {
 
 	public static void main(String[] args) {
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\LENOVO\\git\\VinothiniJavaProject\\drivers\\chromedriver_107.exe");
+				"./src/test/resources/drivers/chromedriver_107.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 //		maximizeAWindow();

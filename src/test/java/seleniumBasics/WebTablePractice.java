@@ -15,9 +15,9 @@ public class WebTablePractice {
 	static int tableRows;
 
 	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver",
-//				"C:\\Users\\LENOVO\\git\\VinothiniJavaProject\\drivers\\chromedriver_107.exe");
-//				"C:/Users/prabu/git/VinothiniJavaProject/src/test/resources/drivers/chromedriver_107.exe");
+//		System.setProperty("webdriver.chrome.driver","C:/Users/prabu/git/VinothiniJavaProject/src/test/resources/drivers/chromedriver_107.exe");
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\prabu\\git\\VinothiniJavaProject\\src\\test\\resources\\drivers\\chromedriver_107.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 //		driver.get("file:///C:/Users/LENOVO/Desktop/webTable.html");
